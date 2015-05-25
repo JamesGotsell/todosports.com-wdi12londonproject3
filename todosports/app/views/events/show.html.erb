@@ -1,0 +1,129 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @event.id %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @event.url %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @event.start_time %>
+</p>
+
+<p>
+  <strong>Stop time:</strong>
+  <%= @event.stop_time %>
+</p>
+
+<p>
+  <strong>Venue:</strong>
+  <%= @event.venue_id %>
+</p>
+
+<p>
+  <strong>Venue url:</strong>
+  <%= @event.venue_url %>
+</p>
+
+<p>
+  <strong>Venue name:</strong>
+  <%= @event.venue_name %>
+</p>
+
+<p>
+  <strong>Venue display:</strong>
+  <%= @event.venue_display %>
+</p>
+
+<p>
+  <strong>City name:</strong>
+  <%= @event.city_name %>
+</p>
+
+<p>
+  <strong>Region name:</strong>
+  <%= @event.region_name %>
+</p>
+
+<p>
+  <strong>Region abbr:</strong>
+  <%= @event.region_abbr %>
+</p>
+
+<p>
+  <strong>Country name:</strong>
+  <%= @event.country_name %>
+</p>
+
+<p>
+  <strong>All day:</strong>
+  <%= @event.all_day %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @event.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @event.longitude %>
+</p>
+
+<p>
+  <strong>Geocode type:</strong>
+  <%= @event.geocode_type %>
+</p>
+
+<p>
+  <strong>Trackback count:</strong>
+  <%= @event.trackback_count %>
+</p>
+
+<p>
+  <strong>Calendar count:</strong>
+  <%= @event.calendar_count %>
+</p>
+
+<p>
+  <strong>Comment count:</strong>
+  <%= @event.comment_count %>
+</p>
+
+<p>
+  <strong>Link count:</strong>
+  <%= @event.link_count %>
+</p>
+
+<p>
+  <strong>Created:</strong>
+  <%= @event.created %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @event.owner %>
+</p>
+
+<p>
+  <strong>Modified:</strong>
+  <%= @event.modified %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  url: MyString
+  title: MyString
+  description: MyString
+  start_time: MyString
+  stop_time: MyString
+  venue_id: 1
+  venue_url: MyString
+  venue_name: MyString
+  venue_display: 
+  city_name: MyString
+  region_name: MyString
+  region_abbr: MyString
+  country_name: MyString
+  all_day: 1
+  latitude: 1.5
+  longitude: 1.5
+  geocode_type: MyString
+  trackback_count: 1
+  calendar_count: 1
+  comment_count: 1
+  link_count: 1
+  created: MyString
+  owner: MyString
+  modified: MyString
+
+two:
+  id: MyString
+  url: MyString
+  title: MyString
+  description: MyString
+  start_time: MyString
+  stop_time: MyString
+  venue_id: 1
+  venue_url: MyString
+  venue_name: MyString
+  venue_display: 
+  city_name: MyString
+  region_name: MyString
+  region_abbr: MyString
+  country_name: MyString
+  all_day: 1
+  latitude: 1.5
+  longitude: 1.5
+  geocode_type: MyString
+  trackback_count: 1
+  calendar_count: 1
+  comment_count: 1
+  link_count: 1
+  created: MyString
+  owner: MyString
+  modified: MyString
