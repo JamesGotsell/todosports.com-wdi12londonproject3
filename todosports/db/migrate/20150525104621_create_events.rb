@@ -10,7 +10,8 @@ class CreateEvents < ActiveRecord::Migration
       t.integer :venue_id
       t.string :venue_url
       t.string :venue_name
-      t.booleanvenue_address :venue_display
+      t.boolean :venue_display
+      t.string :venue_address
       t.string :city_name
       t.string :region_name
       t.string :region_abbr

@@ -10,7 +10,8 @@ one:
   venue_id: 1
   venue_url: MyString
   venue_name: MyString
-  venue_display: 
+  venue_display: false
+  venue_address: MyString
   city_name: MyString
   region_name: MyString
   region_abbr: MyString
@@ -37,7 +38,8 @@ two:
   venue_id: 1
   venue_url: MyString
   venue_name: MyString
-  venue_display: 
+  venue_display: false
+  venue_address: MyString
   city_name: MyString
   region_name: MyString
   region_abbr: MyString
