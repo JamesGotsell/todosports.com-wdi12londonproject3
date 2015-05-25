@@ -7,5 +7,7 @@ class User < ActiveRecord::Base
   validates_associated :events
   # validates :name, length: { minimum: 2 }
   # validates :age, numericality: true
+
+  mount_uploader :picture, PictureUploader
   
 end

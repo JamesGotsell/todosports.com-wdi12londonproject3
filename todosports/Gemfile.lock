@@ -159,7 +159,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  carrierwave
+  carrierwave (= 0.10.0)
   coffee-rails (~> 4.1.0)
   devise
   high_voltage (~> 2.3.0)

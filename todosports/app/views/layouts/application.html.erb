@@ -15,7 +15,11 @@
       <li><%=link_to 'About', page_path('about')%></li>
 
       <% if user_signed_in? %>
-    </li>
+              <% if current_user.picture.present? %>
+                <li class="nav-link" id="user_profile">
+                  <%= image_tag current_user.picture.thumb.url  %>
+                </li>
+                <% end %>
     <li>
       <%= link_to 'Edit', edit_user_registration_path %> <!-- user profile page -->
     </li>
