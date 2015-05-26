@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :events
-  validates_associated :events
+  # validates_associated :events
   # validates :name, length: { minimum: 2 }
   # validates :age, numericality: true
 
