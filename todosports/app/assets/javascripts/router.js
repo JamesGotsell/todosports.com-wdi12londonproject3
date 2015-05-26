@@ -3,7 +3,8 @@ define([
   'underscore',
   'backbone',
   'views/application'
-], function($, _, Backbone, ApplicationView ){
+  'views/search'
+], function($, _, Backbone, ApplicationView, SearchBarView){
 
   var Router = Backbone.Router.extend({
 
@@ -24,6 +25,7 @@ define([
 
     router.on('route:search', function(){
       console.log("search");
+      new SearchBarView();
     });
     router.on('route:events', function(){
       console.log("events");
