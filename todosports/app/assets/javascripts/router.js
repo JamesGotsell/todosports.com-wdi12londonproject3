@@ -27,10 +27,10 @@ define([
       console.log("search");
       new SearchBarView();
     });
-    router.on('route:events', function(){
+    router.on('route:Events', function(){
       console.log("events");
     });
-    router.on('route:myevents', function(){
+    router.on('route:MyEvents', function(){
       console.log("myevents");
     });
 

@@ -39,10 +39,11 @@
     </ul>
   </nav>
 
-  <main>
+  
   <% if user_signed_in? %>
-    <section></section>
+    <section></section> <!--- maybe inject the backbone.js into the nav insted-->
   <% end%>
+  <main>
     <%= yield %> <!-- you need to remove this when coding backbone --> 
   </main>
 <footer>
