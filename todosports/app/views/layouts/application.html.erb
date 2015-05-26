@@ -40,7 +40,9 @@
   </nav>
 
   <main>
+  <% if user_signed_in? %>
     <section></section>
+  <% end%>
     <%= yield %> <!-- you need to remove this when coding backbone --> 
   </main>
 <footer>
