@@ -3,14 +3,14 @@
 <head>
   <title>Todosport</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "lib/require", "data-main" => asset_url("application.js") %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <nav>
     <ul>
       <!--  i need to add a basic nav bar -->
-      <li><%=link_to 'home', page_path('home')%></li> 
+      <li><%=link_to 'Home', page_path('home')%></li> 
 
       <li><%=link_to 'About', page_path('about')%></li>
 

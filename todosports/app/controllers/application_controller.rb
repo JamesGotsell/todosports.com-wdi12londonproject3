@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
       render text: "", layout: true
     end
     
-
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
   protected
