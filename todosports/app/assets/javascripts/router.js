@@ -2,7 +2,7 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'views/application'
+  'views/application',
   'views/search'
 ], function($, _, Backbone, ApplicationView, SearchBarView){
 
