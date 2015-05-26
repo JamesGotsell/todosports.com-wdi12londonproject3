@@ -6,7 +6,7 @@ define([
 ], function($, _, Backbone, SearchBarTemplate) {
 
   return Backbone.View.extend({
-    el: "main",
+    el: "nav",
     render: function() {
       var template = _.template(SearchBarTemplate);
       this.$el.html(template());

@@ -23,7 +23,7 @@ define([
   var initialize = function() {
     var router = new Router;
 
-    router.on('route:search', function(){
+    router.on('route:Search', function(){
       console.log("search");
       new SearchBarView();
     });
