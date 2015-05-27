@@ -1,3 +1,6 @@
+// google maps javascript and map marker for each api result is coded here and injected into
+// the events view in the browser
+
 define([
   'jquery',
   'underscore',

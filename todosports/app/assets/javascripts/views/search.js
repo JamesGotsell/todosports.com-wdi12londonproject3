@@ -1,3 +1,4 @@
+// api searching javascript is coded here and displays the results in events view 
 define([
   'jquery',
   'underscore',
