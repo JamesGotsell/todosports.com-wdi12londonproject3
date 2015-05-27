@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users , controllers: { omniauth_callbacks: 'omniauth_callbacks' }
   resources :events
   
+  # root "statics#index"
   # resources :users
   # root to: "home#index" 
   # config/initializers/high_voltage.rb
