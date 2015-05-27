@@ -1,0 +1,24 @@
+<h1>event</h1>
+<% _.each(events, function(event){ %>
+
+
+<p>
+  <b>Title:</b>
+  <%= event.get("title") %>
+</p>
+
+<p>
+  <b>Description</b>
+  <%= event.get("description") %>
+</p>
+
+<p>
+  <b>City</b>
+  <%= event.get("city_name") %> 
+</p>
+
+<p>
+  <b>Venue</b>
+  <%= event.get("venue_name") %>
+</p>
+<% }); %>

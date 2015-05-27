@@ -10,9 +10,8 @@
   <nav>
     <ul>
       <!--  i need to add a basic nav bar -->
-      <li><%=link_to 'Home', page_path('home')%></li> 
-
-      <li><%=link_to 'About', page_path('about')%></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/#about">About</a></li>
 
       <% if user_signed_in? %>
       <% if current_user.picture.present? %>
@@ -38,18 +37,19 @@
       <% end %>
     </ul>
   </nav>
-  <% if user_signed_in? %>
+  <%if user_signed_in? %>
   <section></section> <!--- maybe inject the backbone.js into the nav insted-->
-  <% end%>
+  <%end%>
   <main>
-    <%= yield %>  
   </main>
+
+  <%=yield%>
+
   <% if user_signed_in? %>
    <article></article> 
    <div></div>
   <%end%>
   <footer>
-    <p>stuff</p>
   </footer>
 </body>
 </html>

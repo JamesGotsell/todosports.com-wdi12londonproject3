@@ -4,14 +4,17 @@ define([
   'backbone',
   'views/application',
   'views/search',
-  'views/events'
-], function($, _, Backbone, ApplicationView, SearchBarView, EventsView){
+  'views/events',
+  'views/myevents',
+  'views/home',
+  'views/about'
+], function($, _, Backbone, ApplicationView, SearchBarView, EventsView, myEventsView, HomeView, AboutView){
 
   var Router = Backbone.Router.extend({
 
     routes: {
       ''           : 'home',
-      '/about'     : 'about',
+      'about'     : 'about',
       'events'     : 'events',
       'myevents'   : 'myEvents',
       '*actions'   : 'defaultAction'
@@ -21,6 +24,7 @@ define([
   var layout = function(){
     new ApplicationView().render();
     new SearchBarView().render();
+
   }
 
   var initialize = function() {
@@ -28,6 +32,14 @@ define([
 
     var router = new Router;
 
+    router.on('route:home', function(){
+      console.log("home");
+      new HomeView().render();
+    });
+    router.on('route:about', function(){
+      console.log("about");
+      new AboutView().render();
+    });
     router.on('route:events', function(){
       console.log("events");
       new EventsView();
@@ -35,6 +47,7 @@ define([
 
     router.on('route:myEvents', function(){
       console.log("myevents");
+      new myEventsView();
     });
 
     router.on('route:defaultAction', function(actions) {
