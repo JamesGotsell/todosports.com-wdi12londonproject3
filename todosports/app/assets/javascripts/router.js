@@ -15,13 +15,13 @@ define([
   var Router = Backbone.Router.extend({
 
     routes: {
-      ''           : 'home',
+      ''          : 'home',
       'about'     : 'about',
-      'events'     : 'events',
-      'myevents'   : 'myEvents',
-      'directions'  : 'directions',
-      'events/:id'    : 'Show',
-      '*actions'   : 'defaultAction'
+      'events'    : 'events',
+      'myevents'  : 'myEvents',
+      'directions': 'directions',
+      'events/:id': 'Show',
+      '*actions'  : 'defaultAction'
     }
   });
 
@@ -37,7 +37,7 @@ define([
     var router = new Router;
 
     router.on('route:home', function(){
-      console.log("home");
+      // console.log("home");
       new HomeView().render();
     });
     router.on('route:about', function(){
@@ -49,8 +49,9 @@ define([
       new EventsView();
     });
     router.on('route:Show', function(id){
-      console.log("event Show ", id);
+      console.log("Show", id);
       new ShowView(id);
+
     });
     router.on('route:myEvents', function(){
       console.log("myevents");
@@ -64,7 +65,6 @@ define([
     router.on('route:defaultAction', function(actions) {
       console.log('No route:', actions);
     });
-
 
     Backbone.history.start();
   }
