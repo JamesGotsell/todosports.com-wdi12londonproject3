@@ -5,11 +5,12 @@ define([
   'views/application',
   'views/search',
   'views/events',
+  'views/show',
   'views/myevents',
   'views/directions',
   'views/home',
   'views/about'
-], function($, _, Backbone, ApplicationView, SearchBarView, EventsView, myEventsView, DirectionsView,HomeView, AboutView){
+], function($, _, Backbone, ApplicationView, SearchBarView, EventsView, ShowView, myEventsView, DirectionsView,  HomeView, AboutView){
 
   var Router = Backbone.Router.extend({
 
@@ -19,6 +20,7 @@ define([
       'events'     : 'events',
       'myevents'   : 'myEvents',
       'directions'  : 'directions',
+      'events/:id'    : 'Show',
       '*actions'   : 'defaultAction'
     }
   });
@@ -46,7 +48,10 @@ define([
       console.log("events");
       new EventsView();
     });
-
+    router.on('route:Show', function(id){
+      console.log("event Show ", id);
+      new ShowView(id);
+    });
     router.on('route:myEvents', function(){
       console.log("myevents");
       new myEventsView();
@@ -55,7 +60,7 @@ define([
       console.log("directions");
       new DirectionsView();
     });
-
+  
     router.on('route:defaultAction', function(actions) {
       console.log('No route:', actions);
     });

@@ -1,0 +1,30 @@
+<h1>Event </h1>
+ <p>this is the place the directions for each event should be shown</p>
+<p>
+  <b>Id:</b>
+  <%= event.get("id") %>
+</p> 
+
+<p>
+  <b>Title:</b>
+  <a href="/#events/<%= event.get("id") %>"><%= event.get("title") %></a>
+</p>
+<p>
+  <b>Description</b>
+  <%= event.get("description") %>
+</p>
+
+<p>
+  <b>City</b>
+  <%= event.get("city_name") %> 
+</p>
+
+<p>
+  <b>Venue</b>
+  <%= event.get("venue_name") %>
+</p>
+
+<button>Add to MyEvents</button>
+
+
+<a href="/#events">Back</a>

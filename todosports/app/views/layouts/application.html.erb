@@ -10,7 +10,7 @@
   <nav>
     <ul>
       <!--  i need to add a basic nav bar -->
-      <li><a href="/">Home</a></li>
+      <li><a href="/#">Home</a></li>
       <li><a href="/#about">About</a></li>
 
       <% if user_signed_in? %>
@@ -41,10 +41,10 @@
   <section></section> <!--- maybe inject the backbone.js into the nav insted-->
   <%end%>
   <main>
+
   </main>
 
   <%=yield%>
-
   <% if user_signed_in? %>
    <article></article> 
    <div></div>
