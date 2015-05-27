@@ -20,7 +20,7 @@ define([
     },
     render: function(data) {
       var template = _.template(myEventsTemplate);
-      this.$el.html(template({events: data.models}));
+      this.$el.html(template({events: data.model}));
       return this.el;
     }
   });

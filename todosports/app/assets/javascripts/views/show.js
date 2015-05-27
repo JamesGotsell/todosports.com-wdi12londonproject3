@@ -18,7 +18,7 @@ define([
             },
             render: function(data){
               var template =_.template(ShowTemplate);
-              this.$el.html(template({events:data}))
+              this.$el.html(template({events:data.models}))
             }
           })
         }
