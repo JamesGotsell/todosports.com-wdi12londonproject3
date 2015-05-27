@@ -9,7 +9,7 @@ define([
   var Router = Backbone.Router.extend({
 
     routes: {
-      '/#search'    : 'Search',
+      '/'           : 'Home',
       '/#events'    : 'Events',
       '/#myevents'  : 'MyEvents',
       '*actions'    : 'defaultAction'
@@ -18,15 +18,12 @@ define([
 
   var layout = function(){
     new ApplicationView().render();
+    new SearchBarView().render();
   }
 
   var initialize = function() {
     var router = new Router;
 
-    router.on('route:Search', function(){
-      console.log("search");
-      new SearchBarView();
-    });
     router.on('route:Events', function(){
       console.log("events");
     });

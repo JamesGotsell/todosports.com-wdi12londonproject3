@@ -38,16 +38,17 @@
       <% end %>
     </ul>
   </nav>
-
-  
   <% if user_signed_in? %>
-    <section></section> <!--- maybe inject the backbone.js into the nav insted-->
+  <section></section> <!--- maybe inject the backbone.js into the nav insted-->
   <% end%>
   <main>
-    <%= yield %> <!-- you need to remove this when coding backbone --> 
+    <%= yield %>  
   </main>
-<footer>
-  <p>stuff</p>
-</footer>
+  <% if user_signed_in? %>
+   <article></article> 
+  <%end%>
+  <footer>
+    <p>stuff</p>
+  </footer>
 </body>
 </html>
