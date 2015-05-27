@@ -3,8 +3,9 @@ define([
   'underscore',
   'backbone',
   'views/application',
-  'views/search'
-], function($, _, Backbone, ApplicationView, SearchBarView){
+  'views/search',
+  'views/events'
+], function($, _, Backbone, ApplicationView, SearchBarView, EventsView){
 
   var Router = Backbone.Router.extend({
 
@@ -28,6 +29,9 @@ define([
 
     router.on('route:events', function(){
       console.log("events");
+      debugger
+      new EventsView();
+
     });
     router.on('route:myEvents', function(){
       console.log("myevents");

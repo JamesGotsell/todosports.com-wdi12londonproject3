@@ -1,1 +1,28 @@
 <!-- i need to get the events information to show here and the google maps with markers-->
+<h1>Listing events</h1>
+{title: ", city_name:  venue_name: 
+<table id="events-table">
+  <tr>
+    <th>Title</th>
+    <th>description</th>
+    <th>city</th>
+    <th>venue</th>
+  </tr>
+
+  <tbody>
+    <% _.each(events, function(event){ %>
+      <tr>
+        
+        <td><%= event.get("title") %></td>
+        <td><%= event.get("description") %></td>
+        <td><%= event.get("city_name") %></td>
+        <td><%= event.get("venue_name") %></td>
+      </tr>
+    <% }); %>
+  </tbody>
+
+</table>
+
+<br/>
+
+<a href="/">Home</a>
