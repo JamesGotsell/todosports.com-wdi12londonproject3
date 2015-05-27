@@ -7,7 +7,7 @@ define([
 
   return Backbone.View.extend({
     el: "article",
-    
+
     render: function() {
       var template = _.template(SearchBarTemplate);
       this.$el.html(template());

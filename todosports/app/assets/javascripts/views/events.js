@@ -7,20 +7,22 @@ define([
 ], function($, _, Backbone, EventsCollection, EventsTemplate){
 
   var EventsView = Backbone.View.extend({
-    el: "article",
-    intialize: function(){
+    el: "div",
+    initialize: function(){
       var self = this;
       var collection = new EventsCollection();
       var data = collection.fetch({
         success:function(data){
-          self.render(data)
+          console.log(data);
+          self.render(data);
         }
       });
     },
-    render: function() {
+    render: function(data) {
       var template = _.template(EventsTemplate);
-      this.$el.html(template({events: data.model}));
-      // return this.el;
+      this.$el.html(template({events: data.models}));
+      return this.el;
+      debugger
     }
   });
 

@@ -10,10 +10,11 @@ define([
   var Router = Backbone.Router.extend({
 
     routes: {
-      ''           : 'Home',
+      ''           : 'home',
+      '/about'     : 'about',
       'events'     : 'events',
       'myevents'   : 'myEvents',
-      '*actions'    : 'defaultAction'
+      '*actions'   : 'defaultAction'
     }
   });
 
@@ -29,10 +30,9 @@ define([
 
     router.on('route:events', function(){
       console.log("events");
-      debugger
       new EventsView();
-
     });
+
     router.on('route:myEvents', function(){
       console.log("myevents");
     });
