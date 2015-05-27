@@ -9,9 +9,9 @@ define([
   var Router = Backbone.Router.extend({
 
     routes: {
-      '/'           : 'Home',
-      '/#events'    : 'Events',
-      '/#myevents'  : 'MyEvents',
+      ''           : 'Home',
+      'events'     : 'events',
+      'myevents'   : 'myEvents',
       '*actions'    : 'defaultAction'
     }
   });
@@ -22,19 +22,22 @@ define([
   }
 
   var initialize = function() {
+    layout();
+
     var router = new Router;
 
-    router.on('route:Events', function(){
+    router.on('route:events', function(){
       console.log("events");
     });
-    router.on('route:MyEvents', function(){
+    router.on('route:myEvents', function(){
       console.log("myevents");
     });
 
     router.on('route:defaultAction', function(actions) {
       console.log('No route:', actions);
     });
-    layout();
+
+
     Backbone.history.start();
   }
 

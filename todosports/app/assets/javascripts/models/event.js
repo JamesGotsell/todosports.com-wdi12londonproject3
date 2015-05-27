@@ -5,7 +5,7 @@ define([
 
 
   return Backbone.Model.extend({
-     url: "/events",
+     url: "/events.json",
      defaults: {
         api_id: "",
        url:"",
