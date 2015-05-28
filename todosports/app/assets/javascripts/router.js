@@ -28,35 +28,38 @@ define([
   var layout = function(){
     new ApplicationView().render();
     new SearchBarView().render();
-
   }
 
   var initialize = function() {
-    layout();
+    // layout();
 
     var router = new Router;
 
     router.on('route:home', function(){
-      // console.log("home");
+      console.log("home");
       new HomeView().render();
     });
+
     router.on('route:about', function(){
       console.log("about");
       new AboutView().render();
     });
+
     router.on('route:events', function(){
       console.log("events");
       new EventsView();
     });
+
     router.on('route:Show', function(id){
       console.log("Show", id);
       new ShowView(id);
-
     });
+    
     router.on('route:myEvents', function(){
       console.log("myevents");
       new myEventsView();
     });
+
     router.on('route:directions', function(){
       console.log("directions");
       new DirectionsView();

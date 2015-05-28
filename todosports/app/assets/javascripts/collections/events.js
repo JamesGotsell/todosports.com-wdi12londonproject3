@@ -2,10 +2,10 @@ define([
   'underscore',
   'backbone',
   'models/event'
-], function(_, Backbone, Events){
+], function(_, Backbone, Event){
 
   return Backbone.Collection.extend({
-    model: Events,
+    model: Event,
     url: "/events.json"
   });
 

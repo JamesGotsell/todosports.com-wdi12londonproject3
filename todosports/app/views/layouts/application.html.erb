@@ -14,13 +14,13 @@
       <li><a href="/#about">About</a></li>
 
       <% if user_signed_in? %>
-      <% if current_user.picture.present? %>
-      <li class="nav-link" id="user_profile">
-        <%= image_tag current_user.picture.thumb.url  %>
-      </li>
-      <%else%>
-      
-      <% end %>
+      <li><a href="/#events">Events</a></li>
+      <li><a href="/#myevents">My Events</a></li>
+        <% if current_user.picture.present? %>
+          <li class="nav-link" id="user_profile">
+            <%= image_tag current_user.picture.thumb.url  %>
+          </li>
+        <% end %>
       <li>
         <%= link_to 'Edit', edit_user_registration_path %> <!-- user profile page -->
       </li>
@@ -37,18 +37,12 @@
       <% end %>
     </ul>
   </nav>
-  <%if user_signed_in? %>
-  <section></section> <!--- maybe inject the backbone.js into the nav insted-->
-  <%end%>
-  <main>
 
-  </main>
+  <%if user_signed_in? %>
+  <%end%>
 
   <%=yield%>
-  <% if user_signed_in? %>
-   <article></article> 
-   <div></div>
-  <%end%>
+
   <footer>
   </footer>
 </body>

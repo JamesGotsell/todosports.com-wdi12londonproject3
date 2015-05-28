@@ -16,7 +16,6 @@ define([
       var collection = new EventsCollection();
       var data = collection.fetch({
         success:function(data){
-          console.log(data);
           self.render(data);
         }
       });

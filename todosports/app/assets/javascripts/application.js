@@ -13,7 +13,7 @@ require([
   'jquery',
   'jquery_ujs'
 ], function(App, jquery, jquery_ujs){
-  App.initialize();
+  if ($('main').length > 0) {
+    App.initialize();
+  }
 });
-
-console.log("hello")
