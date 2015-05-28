@@ -4,15 +4,24 @@ define([
   'models/event'
 ], function(_, Backbone, Event){
 
-  return Backbone.Collection.extend({
-    model: Event,
-    url: "http://eventful.com/events?q=sport&|=london&api-key=['EVENTFUL_API_KEY']",
+var Events = Backbone.Collection.extend({
+    model: event,
+    url: "http://api.eventful.com/json/events/search?q=sport&|=London&api-key=['APP_KEY']",
+    parse: function(response){
+      return response.results;
+    },
     initialize: function(){
       this.fetch({
         success: this.fetchSuccess,
-        error: this.fetchError
+         error: this.fetchError ,
+          
       });
-    } 
+    }, 
+
   });
 
+ // console.log(this)
+
+new Events().fetch();
 });
+
