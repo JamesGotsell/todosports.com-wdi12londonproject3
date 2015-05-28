@@ -26,12 +26,12 @@ define([
   });
 
   var layout = function(){
-    new ApplicationView().render();
+    // new ApplicationView().render();
     new SearchBarView().render();
   }
 
   var initialize = function() {
-    // layout();
+    layout();
 
     var router = new Router;
 
