@@ -14,5 +14,6 @@ define([
       this.$el.html(template());
       return this.el;
     }
+
   });
 });
