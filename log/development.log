@@ -1,0 +1,949 @@
+
+
+Started GET "/" for ::1 at 2015-05-28 11:19:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 637ms (Views: 633.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-28 11:19:06 +0100
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/jquery_ujs.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/views/events.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/views/myevents.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/views/show.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/views/application.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/views/search.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/views/directions.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/views/home.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/views/about.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/collections/events.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/models/event.js" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/templates/events" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/templates/application.html" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/templates/show" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/templates/searchbar" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/templates/myevents" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/templates/directions" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/templates/home" for ::1 at 2015-05-28 11:19:07 +0100
+
+
+Started GET "/assets/templates/about" for ::1 at 2015-05-28 11:19:08 +0100
+
+
+Started GET "/users/sign_up" for ::1 at 2015-05-28 11:19:12 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 109ms (Views: 85.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/jquery_ujs.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/views/application.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/views/search.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/views/show.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/views/directions.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/views/events.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/views/myevents.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/views/home.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/views/about.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/models/event.js" for ::1 at 2015-05-28 11:19:12 +0100
+
+
+Started GET "/assets/collections/events.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/application.html" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/searchbar" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/show" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/directions" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/events" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/myevents" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/home" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/about" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/users/sign_in" for ::1 at 2015-05-28 11:19:13 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/jquery_ujs.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/views/application.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/views/search.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/views/directions.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/views/myevents.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/views/events.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/views/show.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/views/home.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/views/about.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/collections/events.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/models/event.js" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/myevents" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/application.html" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/searchbar" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/directions" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/events" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/show" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/home" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started GET "/assets/templates/about" for ::1 at 2015-05-28 11:19:13 +0100
+
+
+Started POST "/users/sign_in" for ::1 at 2015-05-28 11:19:14 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sj59pY1ELBPVEvH2lsiGmKtfCjzBiFnzyUxspKMe8JVje8FKk+ojq0Q7D1w9204jlAch4Qfk9sEnAwYaDJm2JQ==", "user"=>{"email"=>"james@james.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (3.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "james@james.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4  [["current_sign_in_at", "2015-05-28 10:19:15.105835"], ["sign_in_count", 2], ["updated_at", "2015-05-28 10:19:15.108863"], ["id", 1]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 129ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/" for ::1 at 2015-05-28 11:19:15 +0100
+Processing by StaticsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered statics/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/views/search.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/views/myevents.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/views/show.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/views/directions.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/views/events.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/views/application.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/views/home.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/views/about.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/collections/events.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/models/event.js" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/templates/searchbar" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/templates/myevents" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/templates/show" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/templates/events" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/templates/directions" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/templates/application.html" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/templates/home" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/assets/templates/about" for ::1 at 2015-05-28 11:19:15 +0100
+
+
+Started GET "/events.json" for ::1 at 2015-05-28 11:19:16 +0100
+Processing by EventsController#index as JSON
+  [1m[36mEvent Load (1.7ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.json.jbuilder (29.9ms)
+Completed 200 OK in 55ms (Views: 43.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/edit" for ::1 at 2015-05-28 11:19:17 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-28 11:19:17 +0100
+
+
+Started GET "/assets/jquery_ujs.js" for ::1 at 2015-05-28 11:19:17 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-28 11:19:17 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-28 11:19:17 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-28 11:19:17 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-28 11:19:17 +0100
+
+
+Started GET "/assets/views/application.js" for ::1 at 2015-05-28 11:19:17 +0100
+
+
+Started GET "/assets/views/events.js" for ::1 at 2015-05-28 11:19:17 +0100
+
+
+Started GET "/assets/views/myevents.js" for ::1 at 2015-05-28 11:19:17 +0100
+
+
+Started GET "/assets/views/search.js" for ::1 at 2015-05-28 11:19:17 +0100
+
+
+Started GET "/assets/views/show.js" for ::1 at 2015-05-28 11:19:17 +0100
+
+
+Started GET "/assets/views/directions.js" for ::1 at 2015-05-28 11:19:17 +0100
+
+
+Started GET "/assets/views/home.js" for ::1 at 2015-05-28 11:19:17 +0100
+
+
+Started GET "/assets/views/about.js" for ::1 at 2015-05-28 11:19:17 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-28 11:19:18 +0100
+
+
+Started GET "/assets/collections/events.js" for ::1 at 2015-05-28 11:19:18 +0100
+
+
+Started GET "/assets/models/event.js" for ::1 at 2015-05-28 11:19:18 +0100
+
+
+Started GET "/assets/templates/events" for ::1 at 2015-05-28 11:19:18 +0100
+
+
+Started GET "/assets/templates/application.html" for ::1 at 2015-05-28 11:19:18 +0100
+
+
+Started GET "/assets/templates/searchbar" for ::1 at 2015-05-28 11:19:18 +0100
+
+
+Started GET "/assets/templates/myevents" for ::1 at 2015-05-28 11:19:18 +0100
+
+
+Started GET "/assets/templates/show" for ::1 at 2015-05-28 11:19:18 +0100
+
+
+Started GET "/assets/templates/directions" for ::1 at 2015-05-28 11:19:18 +0100
+
+
+Started GET "/assets/templates/home" for ::1 at 2015-05-28 11:19:18 +0100
+
+
+Started GET "/assets/templates/about" for ::1 at 2015-05-28 11:19:18 +0100
+
+
+Started GET "/" for ::1 at 2015-05-28 11:19:19 +0100
+Processing by StaticsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered statics/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/jquery_ujs.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/views/search.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/views/application.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/views/show.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/views/myevents.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/views/events.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/views/directions.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/views/home.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/views/about.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/models/event.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/collections/events.js" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/templates/searchbar" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/templates/application.html" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/templates/myevents" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/templates/show" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/templates/events" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/templates/directions" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/templates/home" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/assets/templates/about" for ::1 at 2015-05-28 11:19:19 +0100
+
+
+Started GET "/events.json" for ::1 at 2015-05-28 11:19:20 +0100
+Processing by EventsController#index as JSON
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.json.jbuilder (6.2ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events.json" for ::1 at 2015-05-28 11:19:20 +0100
+Processing by EventsController#index as JSON
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.json.jbuilder (2.8ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?events_Api_search=cbbcnv" for ::1 at 2015-05-28 11:19:22 +0100
+Processing by StaticsController#index as HTML
+  Parameters: {"events_Api_search"=>"cbbcnv"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered statics/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/jquery_ujs.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/views/show.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/views/application.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/views/events.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/views/myevents.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/views/search.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/views/directions.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/views/home.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/views/about.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/models/event.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/collections/events.js" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/templates/show" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/templates/searchbar" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/templates/application.html" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/templates/myevents" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/templates/directions" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/templates/events" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/templates/home" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/assets/templates/about" for ::1 at 2015-05-28 11:19:23 +0100
+
+
+Started GET "/events.json" for ::1 at 2015-05-28 11:19:23 +0100
+Processing by EventsController#index as JSON
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.json.jbuilder (2.9ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?events_Api_search=cbbcnv" for ::1 at 2015-05-28 11:20:32 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticsController#index as HTML
+  Parameters: {"events_Api_search"=>"cbbcnv"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered statics/index.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 324ms (Views: 315.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/scaffolds.self-7dec8d92a597b9adf4e8197085bb923dba63f0fb3dcb706c616e088929173714.css?body=1" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/lib/require.self-c9fd6919ecf6671a7f2d5a504ef01f6bf4a9db0fc8ea1a656a53382a397a2b0a.js?body=1" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/jquery_ujs.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/views/application.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/views/search.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/views/show.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/views/events.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/views/myevents.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/views/directions.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/views/home.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/views/about.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/models/event.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/collections/events.js" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/templates/searchbar" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/templates/show" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/templates/application.html" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/templates/events" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/templates/myevents" for ::1 at 2015-05-28 11:20:33 +0100
+
+
+Started GET "/assets/templates/directions" for ::1 at 2015-05-28 11:20:34 +0100
+
+
+Started GET "/assets/templates/home" for ::1 at 2015-05-28 11:20:34 +0100
+
+
+Started GET "/assets/templates/about" for ::1 at 2015-05-28 11:20:34 +0100
+
+
+Started GET "/events.json" for ::1 at 2015-05-28 11:20:34 +0100
+Processing by EventsController#index as JSON
+  [1m[36mEvent Load (1.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.json.jbuilder (30.7ms)
+Completed 200 OK in 55ms (Views: 43.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/edit" for ::1 at 2015-05-28 11:20:36 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/jquery_ujs.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/views/application.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/views/search.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/views/directions.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/views/show.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/views/myevents.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/views/events.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/views/home.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/views/about.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/models/event.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/collections/events.js" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/templates/application.html" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/templates/directions" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/templates/searchbar" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/templates/show" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/templates/myevents" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/templates/events" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/templates/home" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/assets/templates/about" for ::1 at 2015-05-28 11:20:36 +0100
+
+
+Started GET "/" for ::1 at 2015-05-28 11:20:38 +0100
+Processing by StaticsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered statics/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/app.js" for ::1 at 2015-05-28 11:20:38 +0100
+
+
+Started GET "/assets/jquery_ujs.js" for ::1 at 2015-05-28 11:20:38 +0100
+
+
+Started GET "/assets/lib/jquery.js" for ::1 at 2015-05-28 11:20:38 +0100
+
+
+Started GET "/assets/router.js" for ::1 at 2015-05-28 11:20:38 +0100
+
+
+Started GET "/assets/lib/underscore.js" for ::1 at 2015-05-28 11:20:38 +0100
+
+
+Started GET "/assets/lib/backbone.js" for ::1 at 2015-05-28 11:20:38 +0100
+
+
+Started GET "/assets/views/search.js" for ::1 at 2015-05-28 11:20:38 +0100
+
+
+Started GET "/assets/views/show.js" for ::1 at 2015-05-28 11:20:38 +0100
+
+
+Started GET "/assets/views/events.js" for ::1 at 2015-05-28 11:20:38 +0100
+
+
+Started GET "/assets/views/myevents.js" for ::1 at 2015-05-28 11:20:38 +0100
+
+
+Started GET "/assets/views/application.js" for ::1 at 2015-05-28 11:20:38 +0100
+
+
+Started GET "/assets/views/directions.js" for ::1 at 2015-05-28 11:20:38 +0100
+
+
+Started GET "/assets/views/home.js" for ::1 at 2015-05-28 11:20:39 +0100
+
+
+Started GET "/assets/views/about.js" for ::1 at 2015-05-28 11:20:39 +0100
+
+
+Started GET "/assets/lib/text.js" for ::1 at 2015-05-28 11:20:39 +0100
+
+
+Started GET "/assets/models/event.js" for ::1 at 2015-05-28 11:20:39 +0100
+
+
+Started GET "/assets/collections/events.js" for ::1 at 2015-05-28 11:20:39 +0100
+
+
+Started GET "/assets/templates/myevents" for ::1 at 2015-05-28 11:20:39 +0100
+
+
+Started GET "/assets/templates/searchbar" for ::1 at 2015-05-28 11:20:39 +0100
+
+
+Started GET "/assets/templates/show" for ::1 at 2015-05-28 11:20:39 +0100
+
+
+Started GET "/assets/templates/events" for ::1 at 2015-05-28 11:20:39 +0100
+
+
+Started GET "/assets/templates/application.html" for ::1 at 2015-05-28 11:20:39 +0100
+
+
+Started GET "/assets/templates/directions" for ::1 at 2015-05-28 11:20:39 +0100
+
+
+Started GET "/assets/templates/home" for ::1 at 2015-05-28 11:20:39 +0100
+
+
+Started GET "/assets/templates/about" for ::1 at 2015-05-28 11:20:39 +0100
+
+
+Started GET "/events.json" for ::1 at 2015-05-28 11:20:39 +0100
+Processing by EventsController#index as JSON
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/index.json.jbuilder (10.1ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events.json" for ::1 at 2015-05-28 11:20:39 +0100
+Processing by EventsController#index as JSON
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/index.json.jbuilder (2.8ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_out" for ::1 at 2015-05-28 11:20:42 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.4ms)
+  Rendered /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendered /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (128.1ms)
+  Rendered /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (68.9ms)
+  Rendered /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jamesgotsell/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (147.5ms)
