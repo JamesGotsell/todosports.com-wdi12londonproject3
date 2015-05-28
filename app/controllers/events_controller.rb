@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
-    render json: @event, root: false
+    render json: @events, root: false
   end
 
   def show
