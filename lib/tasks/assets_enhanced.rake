@@ -11,7 +11,7 @@
 
 require 'pathname'
 
-require "pry"
+
 # Every time assets:precompile is called, trigger store_it:create_non_digest_assets afterwards. 
 Rake::Task["assets:precompile"].enhance do
   Rake::Task["todosports:create_non_digest_assets"].invoke
