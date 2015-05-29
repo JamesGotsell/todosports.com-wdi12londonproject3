@@ -6,7 +6,6 @@ define([
 ], function($, _, Backbone , Router){
   
   var initialize = function(){
-    console.log("here")
     Router.initialize();
   }
 
