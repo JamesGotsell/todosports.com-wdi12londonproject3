@@ -13,11 +13,10 @@ define([
     el: "main",
     initialize: function(){
       var self = this;
-      var collection = new EventCollection();
+      var collection = new EventsCollection();
       var data = collection.fetch({
-        success:function(data){
+        success:function(data, response, options){
           self.render(data);
-          console.log(data)
         }
       });
     },
