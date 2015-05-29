@@ -10,6 +10,6 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 
-Rails.application.config.assets.precompile += %w( lib/require.js app.js)
+Rails.application.config.assets.precompile += %w( lib/require.js router.js lib/backbone.js lib/underscore.js app.js )
 
 Rails.application.config.non_digest_named_assets = ["app.js"]
