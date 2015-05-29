@@ -1,34 +1,0 @@
-{:uriI"Îfile:///Users/jamesgotsell/Desktop/todosports.com-wdi12londonproject3/todosports/app/assets/javascripts/templates/show.html?type=text/html&id=5d61a2a660713ebcb9571f7b42925ea7d9af2c465f1b27696c5e6782421386c8:ET:load_pathI"e/Users/jamesgotsell/Desktop/todosports.com-wdi12londonproject3/todosports/app/assets/javascripts;F:filenameI"y/Users/jamesgotsell/Desktop/todosports.com-wdi12londonproject3/todosports/app/assets/javascripts/templates/show.html;T:	nameI"templates/show;T:logical_pathI"templates/show.html;T:content_typeI"text/html;T:sourceI"Þ<h1>Event </h1>
- <p>this is the place the directions for each event should be shown</p>
-<p>
-  <b>Id:</b>
-  <%= event.get("id") %>
-</p> 
-
-<p>
-  <b>Title:</b>
-  <a href="/#events/<%= event.get("id") %>"><%= event.get("title") %></a>
-</p>
-<p>
-  <b>Description</b>
-  <%= event.get("description") %>
-</p>
-
-<p>
-  <b>City</b>
-  <%= event.get("city_name") %> 
-</p>
-
-<p>
-  <b>Venue</b>
-  <%= event.get("venue_name") %>
-</p>
-
-<button>Add to MyEvents</button>
-
-
-<a href="/#events">Back</a>;T:metadata{	:dependencieso:Set:
-@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"‚file-digest:///Users/jamesgotsell/Desktop/todosports.com-wdi12londonproject3/todosports/app/assets/javascripts/templates/show.html;TT:charsetI"
-utf-8;F:digest"%ÔÈŠhÝ=ˆ[4ˆ¾QY*ÎÙhbìBOw•ìÑM­Ž:lengthiÞ:integrityI"9sha-256-1MiKaN0EPYhbNIi+UVkqzg3ZaGLsQhJPd5Xs0RRNrY4=;T:dependencies_digest"%fzº‘ä4«í–3õã0#Iï:$7š
-öQ(}éâïºxW±:idI"E5d61a2a660713ebcb9571f7b42925ea7d9af2c465f1b27696c5e6782421386c8;F:
-mtimel+íêfU

@@ -1,38 +1,0 @@
-{:uriI"Ðfile:///Users/jamesgotsell/Desktop/todosports.com-wdi12londonproject3/todosports/app/assets/javascripts/templates/events.html?type=text/html&id=46104589379b31033e2b2232199c0ae76c9980bfa781c7f277d30cdb457c5b7f:ET:load_pathI"e/Users/jamesgotsell/Desktop/todosports.com-wdi12londonproject3/todosports/app/assets/javascripts;F:filenameI"{/Users/jamesgotsell/Desktop/todosports.com-wdi12londonproject3/todosports/app/assets/javascripts/templates/events.html;T:	nameI"templates/events;T:logical_pathI"templates/events.html;T:content_typeI"text/html;T:sourceI"<!-- i need to get the events information to show here and the google maps with markers-->
-<h1>Listing1 events</h1>
-<p>google map needs to be inserted here</p>
-<table id="events-table">
-  <tr>
-    <th>id</th>
-    <th>Title</th>
-    <th>description</th>
-    <th>city</th>
-    <th>venue</th>
-
-  </tr>
-
-  <tbody>
-    <% _.each(events, function(event){ %>
-      <tr>
-        <td><%= event.get("id") %> 
-        <td><a href="/#events/<%= event.get("id") %>"><%= event.get("title") %></td
-        
-        <td></td>
-        <td><%= event.get("description") %></td>
-        <td><%= event.get("city_name") %></td>
-        <td><%= event.get("venue_name") %></td>
-        <td><button>add to MyEvents</button></td>
-
-      </tr>
-
-    <% }); %>
-  </tbody>
-
-</table>
-
-<br/>
-
-<a href="/">Home</a>;T:metadata{	:dependencieso:Set:
-@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"„file-digest:///Users/jamesgotsell/Desktop/todosports.com-wdi12londonproject3/todosports/app/assets/javascripts/templates/events.html;TT:charsetI"
-utf-8;F:digest"%ÓŒšgŸ+¿.0‘o#Oy+ª‰<ªmŽêú‘äëi×ô:lengthi:integrityI"9sha-256-04yaZ58rvy4wkW8jT3krH6qJPKptD47q+hmR5Otp1/Q=;T:dependencies_digest"%uöój¡²2…àÄ›½‘VHû}_¡¶×5èÔ–¾åÀ:idI"E46104589379b31033e2b2232199c0ae76c9980bfa781c7f277d30cdb457c5b7f;F:
-mtimel+íêfU

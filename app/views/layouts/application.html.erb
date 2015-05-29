@@ -2,28 +2,26 @@
 <html>
 <head>
   <title>Todosport</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <script type="text/javascript">
-    var EVENTFUL_API_KEY = "<%= ENV['EVENTFUL_API_KEY'] %>";
-  </script>
-  <%= javascript_include_tag "lib/require", "data-main" => asset_url("application.js") %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <nav>
     <ul>
       <!--  i need to add a basic nav bar -->
-      <li><a href="/#">Home</a></li>
-      <li><a href="/#about">About</a></li>
+      <li><%=link_to 'home', page_path('home')%></li> 
+
+      <li><%=link_to 'About', page_path('about')%></li>
 
       <% if user_signed_in? %>
-      <li><a href="/#events">Events</a></li>
-      <li><a href="/#myevents">My Events</a></li>
-        <% if current_user.picture.present? %>
-          <li class="nav-link" id="user_profile">
-            <%= image_tag current_user.picture.thumb.url  %>
-          </li>
-        <% end %>
+      <% if current_user.picture.present? %>
+      <li class="nav-link" id="user_profile">
+        <%= image_tag current_user.picture.thumb.url  %>
+      </li>
+      <%else%>
+      
+      <% end %>
       <li>
         <%= link_to 'Edit', edit_user_registration_path %> <!-- user profile page -->
       </li>
@@ -40,13 +38,8 @@
       <% end %>
     </ul>
   </nav>
-
-  <%if user_signed_in? %>
-  <%end%>
-
-  <%=yield%>
-
-  <footer>
-  </footer>
+  <main>
+    <%= yield %> <!-- you need to remove this when coding backbone --> 
+  </main>
 </body>
 </html>
