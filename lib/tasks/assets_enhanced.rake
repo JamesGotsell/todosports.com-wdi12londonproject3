@@ -14,7 +14,7 @@ require 'pathname'
 
 # Every time assets:precompile is called, trigger store_it:create_non_digest_assets afterwards. 
 Rake::Task["assets:precompile"].enhance do
-  Rake::Task["store_it:create_non_digest_assets"].invoke
+  Rake::Task["todosports:create_non_digest_assets"].invoke
 end
 
 namespace :todosports do 
