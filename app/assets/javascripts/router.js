@@ -32,6 +32,7 @@ define([
 
   var initialize = function() {
     layout();
+    console.log("router")
 
     var router = new Router;
 
