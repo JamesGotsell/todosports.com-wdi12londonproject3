@@ -2,6 +2,7 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'paginator',
   'views/application',
   'views/search',
   'views/events',
@@ -10,7 +11,7 @@ define([
   'views/directions',
   'views/home',
   'views/about'
-], function($, _, Backbone, ApplicationView, SearchBarView, EventsView, ShowView, myEventsView, DirectionsView,  HomeView, AboutView){
+], function($, _, Backbone, PageableColllection, ApplicationView, SearchBarView, EventsView, ShowView, myEventsView, DirectionsView,  HomeView, AboutView){
 
   var Router = Backbone.Router.extend({
 

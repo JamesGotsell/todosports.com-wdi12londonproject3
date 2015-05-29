@@ -7,22 +7,20 @@ define([
   'backbone',
   'collections/events',
   'text!templates/events'
-], function($, _, Backbone, EventsCollection, EventsTemplate){
+ ], function($, _, Backbone, Events, EventsTemplate){
 
   var EventsView = Backbone.View.extend({
     el: "main",
     initialize: function(){
       var self = this;
-      var collection = new EventsCollection();
-      var data = collection.fetch({
-        success:function(data, response, options){
-          self.render(data);
-        }
-      });
+      var collection = new Backbone.PageableCollection();
+        collection.getPage(1).done(function(data){
+          self.render.data
+          })
     },
     render: function(data) {
       var template = _.template(EventsTemplate);
-      this.$el.html(template({events: data.models}));
+      this.$el.html(template({events: data}));
       return this.el;
     }
   });
