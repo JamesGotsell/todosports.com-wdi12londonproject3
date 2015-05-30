@@ -22,21 +22,19 @@ define([
     },
     // using jQuery  for the click functions
     render: function(data){
+      function addEventHandler(selector, fnName) {
+        self.$el.find(selector).click(function () {
+          // if fnName is abc then self.collection[fnName]() is exactly the same as self.collection.abc()
+          self.collection[fnName]().done(function(data){
+            self.render(data)
+          })
+        });
+      }
       var self = this;
       var template = _.template(EventsTemplate);
       this.$el.html(template({events: data.events.event}));
-      this.$el.find('.next_page').click(function () {
-        self.collection.getNextPage().done(function(data){
-          self.render(data)
-
-        })
-      });
-      this.$el.find('.previous_page').click(function () {
-        self.collection.getPreviousPage().done(function(data){
-          self.render(data)
-      
-        })
-      });
+      addEventHandler('.next_page', 'getNextPage');
+      addEventHandler('.previous_page', 'getPreviousPage');
       return this.el;
 
     }
