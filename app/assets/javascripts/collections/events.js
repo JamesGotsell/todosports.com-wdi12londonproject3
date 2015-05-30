@@ -25,7 +25,7 @@ define([
       return Backbone.sync(method, collection, options);
     },
     state: {
-        pageSize: 15,
+        pageSize: 10,
         sortKey: "updated",
         order: 1
       },

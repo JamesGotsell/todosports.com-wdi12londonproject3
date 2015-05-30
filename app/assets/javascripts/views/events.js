@@ -13,14 +13,15 @@ define([
     el: "main",
     initialize: function(){
       var self = this;
-      var collection = new Backbone.PageableCollection();
+      var collection = new Events();
         collection.getPage(1).done(function(data){
+          console.log(data)
           self.render(data)
           })
     },
     render: function(data) {
       var template = _.template(EventsTemplate);
-      this.$el.html(template({events: data}));
+      this.$el.html(template({events: data.models}));
       return this.el;
     },
 
@@ -30,7 +31,7 @@ define([
         "click .previous_page": "previousPage"
       },
 
-      nextPage: function{
+      nextPage: function(){
         event.preventDefault();
         var self = this;
         var collection = new Backbone.PageableCollection();
@@ -38,7 +39,7 @@ define([
           self.render(data)
         })
       }, 
-      previousPage: function{
+      previousPage: function(){
         event.preventDefault();
         var self = this; 
         // how to recall the previous page
