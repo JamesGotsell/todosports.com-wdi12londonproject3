@@ -14,13 +14,13 @@
   <tbody>
     <% _.each(events, function(event){ %>
       <tr>
-        <td><%= event.get("id") %> 
-        <td><a href="/#events/<%= event.get("id") %>"><%= event.get("title") %></td
+        <td><%= event.id %> 
+        <td><a href="/#events/<%= event.id %>"><%= event.title %></td
         
         <td></td>
-        <td><%= event.get("description") %></td>
-        <td><%= event.get("city_name") %></td>
-        <td><%= event.get("venue_name") %></td>
+        <td><%= event.description %></td>
+        <td><%= event.city_name %></td>
+        <td><%= event.venue_name %></td>
         <td><button>add to MyEvents</button></td>
 
       </tr>
