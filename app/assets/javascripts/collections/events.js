@@ -28,7 +28,7 @@ define([
       this.page = response.page;
       this.perPage = response.per_page;
       this.total = response.total
-      return response.events.event;
+      ;
     },
     state: {
         pageSize: 10,
@@ -46,6 +46,6 @@ define([
          }
       }
   }); 
-
+  return response.events.event
 });
 
