@@ -10,6 +10,11 @@ define([
     el: "main",
     initialize: function(){
       var self = this;
+      var usersEvents = ['E0-001-084359599-9', 'E0-001-081867099-7', 'E0-001-081867107-5'];
+      console.log(usersEvents);
+      console.log(_.map(usersEvents, function (id) {
+        return 'http://api.eventful.com/json/events/get?app_key=77pHDhGxrpBrzj4H&id=' + id;
+      }));
       var collection = new PageableCollection();
       var data = collection.fetch({
         success:function(data){
