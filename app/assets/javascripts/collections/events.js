@@ -24,12 +24,18 @@ define([
       options.dataType = "jsonp";
       return Backbone.sync(method, collection, options);
     },
+     parse : function(response){
+      this.page = response.page;
+      this.perPage = response.per_page;
+      this.total = response.total
+      return response.events.event;
+    },
     state: {
         pageSize: 10,
         sortKey: "updated",
         order: 1
       },
-      queryParams: {
+      queryParams:{
          totalPages: null,
          totalRecords: null,
          sortKey: "sort",
@@ -38,11 +44,7 @@ define([
            "-1": "asc",
            "1": "desc"
          }
-      },
-    parse : function(response) {
-      return response.events.event;
-    }
-
+      }
   }); 
 
 });

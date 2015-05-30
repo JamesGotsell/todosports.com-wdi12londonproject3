@@ -19,9 +19,10 @@ define([
           self.render(data)
           })
     },
-    render: function(data) {
+    render: function(data){
+      console.log(data)
       var template = _.template(EventsTemplate);
-      this.$el.html(template({events: data.models}));
+      this.$el.html(template({events: data.model}));
       return this.el;
     },
 

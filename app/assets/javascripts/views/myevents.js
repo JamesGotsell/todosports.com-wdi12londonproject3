@@ -19,6 +19,8 @@ define([
       });
     },
     render: function(data) {
+      debugger
+      console.log(data)
       var template = _.template(myEventsTemplate);
       this.$el.html(template({events: data.model}));
       return this.el;
