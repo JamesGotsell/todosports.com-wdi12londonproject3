@@ -5,7 +5,8 @@ define([
   'models/event'
 ], function(_, Backbone, PageableCollection, Event){
 
-  var query    = "sport";
+  // use query to search each sports 
+  var query    = "sport"; 
   var location = "London";
   var api_key  = EVENTFUL_API_KEY;
 
@@ -55,7 +56,15 @@ define([
            "-1": "asc",
            "1": "desc"
          }
-      }
+      }, 
+      // var SearchResults = Backbone.Collection.extend({
+      //   url: function(){
+      //     return "http://api.eventful.com/json/events/search?q="+query+"&location="+location+"&app_key=" + api_key 
+      //   },
+      //   search: function(){
+          
+      //   }
+      // });
   }); 
   return response.events.event
 });

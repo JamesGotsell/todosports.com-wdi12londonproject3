@@ -13,6 +13,17 @@ define([
       var template = _.template(SearchBarTemplate);
       this.$el.html(template());
       return this.el;
+    },
+
+    events: {
+      'click #search' : 'search'
+    }, 
+
+    search: function(){
+      console.log("hello")
+      var query = $('#search').val()
+      console.log(query) 
+      
     }
 
   });
