@@ -10,6 +10,7 @@ define([
     el: "main",
     initialize: function(){
       var self = this;
+      debugger
       var data = collection.fetch({
         success:function(data){
           console.log(data);
@@ -18,7 +19,7 @@ define([
       });
     },
     render: function(data) {
-      debugger
+      
       console.log(data)
       var template = _.template(myEventsTemplate);
       this.$el.html(template({events: data.model}));
