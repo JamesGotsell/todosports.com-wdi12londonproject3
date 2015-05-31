@@ -7,23 +7,36 @@ define([
   'backbone',
   'collections/events',
   'text!templates/events'
-], function($, _, Backbone, EventsCollection, EventsTemplate){
+ ], function($, _, Backbone, PageableCollection, EventsTemplate){
 
   var EventsView = Backbone.View.extend({
     el: "main",
     initialize: function(){
       var self = this;
-      var collection = new EventsCollection();
-      var data = collection.fetch({
-        success:function(data, response, options){
-          self.render(data);
-        }
+      this.collection = new PageableCollection();
+
+      this.collection.getPage(1).done(function(data){
+        console.log(data)
+        self.render(data)
       });
     },
-    render: function(data) {
+    // using jQuery  for the click functions
+    render: function(data){
+      function addEventHandler(selector, fnName) {
+        self.$el.find(selector).click(function () {
+          // if fnName is abc then self.collection[fnName]() is exactly the same as self.collection.abc()
+          self.collection[fnName]().done(function(data){
+            self.render(data)
+          })
+        });
+      }
+      var self = this;
       var template = _.template(EventsTemplate);
-      this.$el.html(template({events: data.models}));
+      this.$el.html(template({events: data.events.event}));
+      addEventHandler('.next_page', 'getNextPage');
+      addEventHandler('.previous_page', 'getPreviousPage');
       return this.el;
+
     }
   });
 

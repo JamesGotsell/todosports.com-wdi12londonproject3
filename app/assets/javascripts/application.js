@@ -4,7 +4,8 @@ require.config({
     jquery_ujs: 'jquery_ujs',
     underscore: 'lib/underscore',
     backbone: 'lib/backbone',
-    text: 'lib/text'
+    text: 'lib/text',
+    paginator: 'lib/paginator'
   }
 });
 

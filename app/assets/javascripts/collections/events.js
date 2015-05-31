@@ -1,14 +1,15 @@
 define([
   'underscore',
   'backbone',
+  'paginator',
   'models/event'
-], function(_, Backbone, Event){
+], function(_, Backbone, PageableCollection, Event){
 
   var query    = "sport";
   var location = "London";
   var api_key  = EVENTFUL_API_KEY;
 
-  return Backbone.Collection.extend({
+  return Backbone.PageableCollection.extend({
     model: Event,
     url: "http://api.eventful.com/json/events/search?q="+query+"&location="+location+"&app_key=" + api_key,
     sync : function(method, collection, options) {
@@ -23,11 +24,39 @@ define([
       options.dataType = "jsonp";
       return Backbone.sync(method, collection, options);
     },
-    parse : function(response) {
-      return response.events.event;
-    }
-
+    //  parse : function(response){
+    //   this.page = response.page;
+    //   this.perPage = response.per_page;
+    //   this.total = response.total
+    //   return response.model;
+    // },
+    // pageInfo: function(){
+    // var infor = {
+    //     total: this.total,
+    //     page: this.page,
+    //     perPage: this.per_page, 
+    //     pages: Math.ceil(this.total/ this.perPage),
+    //     prev: false, 
+    //     next: false
+    //   };
+    // },
+    state: {
+        pageSize: 10,
+        sortKey: "updated",
+        order: 1
+      },
+      queryParams:{
+         totalPages: null,
+         totalRecords: null,
+         sortKey: "sort",
+         currentPage: "page_number",
+         order: "direction",
+         directions: {
+           "-1": "asc",
+           "1": "desc"
+         }
+      }
   }); 
-
+  return response.events.event
 });
 

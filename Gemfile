@@ -17,6 +17,8 @@ gem 'omniauth-facebook', '2.0.1'
 
 gem 'active_model_serializers', '0.9.3'
 
+gem 'kaminari', '0.16.3'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
