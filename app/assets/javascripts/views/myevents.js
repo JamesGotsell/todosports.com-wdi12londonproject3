@@ -11,6 +11,7 @@ define([
     initialize: function(){
       var self = this;
       debugger
+      var collection = new PageableCollection();
       var data = collection.fetch({
         success:function(data){
           console.log(data);
