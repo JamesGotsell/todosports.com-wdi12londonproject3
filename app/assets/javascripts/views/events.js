@@ -6,8 +6,7 @@ define([
   'underscore',
   'backbone',
   'collections/events',
-  'text!templates/events',
-  'text!templates/searchbar'
+  'text!templates/events'
  ], function($, _, Backbone, PageableCollection, EventsTemplate , SearchBarTemplate){
 
   var api_key  = EVENTFUL_API_KEY;
