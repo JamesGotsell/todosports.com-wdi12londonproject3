@@ -15,7 +15,6 @@ define([
         this.$el.html(template());
         return this.el;
       },
-
       events: {
         'click #search' : 'search'
       }, 
@@ -27,6 +26,7 @@ define([
         console.log("hello")
         // var search term is var query within the api! 
         var searchTerm = $('#search').val()
+        
         console.log(searchTerm) 
       }
     });
