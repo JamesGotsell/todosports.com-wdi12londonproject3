@@ -8,7 +8,8 @@ class User < ActiveRecord::Base
 
   has_many :identities, dependent: :destroy
 
-  has_many :events
+  has_many :events, through: :favourites 
+  has_many :favourites
 
   validates_associated :events
 
