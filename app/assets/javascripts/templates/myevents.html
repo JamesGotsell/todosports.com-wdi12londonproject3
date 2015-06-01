@@ -1,27 +1,25 @@
-<h1>MyFavouriteEvents</h1>
-<p> i need to think of a way of clearing this page and filling it with data after the user has clicked on the add to my event on the events show page</p>
-<% _.each(favourite, function(favourite){ %>
+<h1>My Favourited Events</h1>
 
-<p>
-  <b>Title:</b>
-  <%= favourite.title %>
-</p>
+<% _.each(favourites, function(favourite){ %>
+  <p>
+    <b>Title:</b>
+    <%= favourite.get("event").title %>
+  </p>
 
-<p>
-  <b>Description</b>
-  <%= favourite.description %>
-</p>
+  <p>
+    <b>Description</b>
+    <%= favourite.get("event").description %>
+  </p>
 
-<p>
-  <b>City</b>
-  <%= favourite.city_name%> 
-</p>
+  <p>
+    <b>City</b>
+    <%= favourite.get("event").city_name %> 
+  </p>
 
-<p>
-  <b>Venue</b>
-  <%= favourite.venue_name %>
-</p>
-<button id="tickets">Buy Tickets</button>
-<!-- <button>Get Directions</button> -->
+  <p>
+    <b>Venue</b>
+    <%= favourite.get("event").venue_name %>
+  </p>
+  <button id="tickets">Buy Tickets</button>
 </br>
 <% }); %>

@@ -9,7 +9,7 @@ class FavouritesController < ApplicationController
     @favourite = current_user.favourites.new(favourite_params)
     respond_to do |format|
       if @favourite.save
-        format.json { render :show, status: :created, location: @favourite }
+        format.json { render json: @favourite.event, status: :created, location: @favourite.event }
       else
         format.json { render json: @favourite.errors, status: :unprocessable_entity }
       end

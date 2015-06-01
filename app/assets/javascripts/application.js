@@ -1,4 +1,7 @@
 require.config({
+  shim: { 
+    'jquery_ujs': ['jquery'] 
+  }, 
   paths: {
     jquery: 'lib/jquery',
     jquery_ujs: 'jquery_ujs',
