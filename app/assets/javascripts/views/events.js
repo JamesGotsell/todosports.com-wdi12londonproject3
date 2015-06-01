@@ -8,7 +8,7 @@ define([
   'collections/events',
   'text!templates/events',
   'text!templates/searchbar'
- ], function($, _, Backbone, PageableCollection, EventsTemplate , SearchBarView){
+ ], function($, _, Backbone, PageableCollection, EventsTemplate , SearchBarTemplate){
 
   var api_key  = EVENTFUL_API_KEY;
 

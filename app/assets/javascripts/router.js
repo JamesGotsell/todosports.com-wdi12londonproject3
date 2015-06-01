@@ -28,7 +28,7 @@ define([
 
   var layout = function(){
     // new ApplicationView().render();
-    new SearchBarView().render();
+    // new SearchBarView().render();
   }
 
   var initialize = function() {
