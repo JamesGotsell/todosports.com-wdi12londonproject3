@@ -11,6 +11,8 @@ gem 'rmagick'
 
 gem 'rails_admin'
 
+gem "httparty"
+
 gem 'omniauth', '1.2.2'
 
 gem 'omniauth-facebook', '2.0.1'

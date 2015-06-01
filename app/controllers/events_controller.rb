@@ -33,6 +33,11 @@ class EventsController < ApplicationController
     end
   end
 
+  def search
+    @eventful_bridge = EventFulApi.new(params[:query], params[:location], params[:page])
+    render json: @eventful_bridge.search
+  end
+
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update

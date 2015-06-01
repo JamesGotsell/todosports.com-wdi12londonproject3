@@ -45,33 +45,36 @@ define([
   });
 
 
-  var SearchBarView = Backbone.View.extend({
-    el: "article",
+  // var SearchBarView = Backbone.View.extend({
+  //   el: "article",
 
-    render: function() {
-      var template = _.template(SearchBarTemplate);
-      this.$el.html(template());
-      return this.el;
-    },
-  });
+  //   render: function() {
+  //     var template = _.template(SearchBarTemplate);
+  //     this.$el.html(template());
+  //     return this.el;
+  //   },
 
-  var Search = Backbone.PageableCollection.extend({
-    model: Event, 
-    initialize: function(searchTerm){
-        this.query = searchTerm.query
-    }, 
-      url: "http://api.eventful.com/json/events/search?q="+this.query+"&location="+location+"&app_key=" + api_key, 
-    events: {
-      'click #search' : 'search'
-    }, 
-    search: function(){ 
-      var searchTerm = $('#search').val()
-      this.collection = new PageableCollection(1); 
-      self.render(this)
-    }, 
+  //   events: {
+  //     'click #search' : 'search'
+  //   }, 
+
+  //   search: function(){ 
+  //     var searchTerm = $('#search').val()
+  //     this.collection = new PageableCollection(1); 
+  //     self.render(this)
+  //   }, 
+  // });
+
+  // // var Search = Backbone.PageableCollection.extend({
+  // //   model: Event, 
+  // //   initialize: function(searchTerm){
+  // //       this.query = searchTerm.query
+  // //   },
+    
+    
     
 
-  })
+  // })
 
   return EventsView;
   return SearchBarView;

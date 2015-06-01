@@ -2,16 +2,16 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'collections/events',
+  'collections/favourite',
   'text!templates/myevents'
-], function($, _, Backbone, PageableCollection, myEventsTemplate){
+], function($, _, Backbone, FavouriteCollection, myEventsTemplate){
 
   var myEventsView = Backbone.View.extend({
     el: "main",
     initialize: function(){
       var self = this;
-      debugger
-      var collection = new PageableCollection();
+      console.log(data)
+      var collection = new FavouriteCollection();
       var data = collection.fetch({
         success:function(data){
           console.log(data);
@@ -19,6 +19,7 @@ define([
         }
       });
     },
+
     render: function(data) {
       
       console.log(data)
