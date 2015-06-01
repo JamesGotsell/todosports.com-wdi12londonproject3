@@ -45,7 +45,7 @@ define([
   });
 
 
-  return Backbone.View.extend({
+  var SearchBarView = Backbone.View.extend({
     el: "article",
 
     render: function() {
@@ -74,4 +74,5 @@ define([
   })
 
   return EventsView;
+  return SearchBarView;
 });

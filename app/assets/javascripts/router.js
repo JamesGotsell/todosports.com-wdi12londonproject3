@@ -11,7 +11,8 @@ define([
   'views/directions',
   'views/home',
   'views/about'
-], function($, _, Backbone, PageableColllection, ApplicationView, SearchBarView, EventsView, ShowView, myEventsView, DirectionsView,  HomeView, AboutView){
+], function($, _, Backbone, PageableColllection, ApplicationView, SearchBarView,
+     EventsView, ShowView, myEventsView, DirectionsView,  HomeView, AboutView){
 
   var Router = Backbone.Router.extend({
 
@@ -28,7 +29,7 @@ define([
 
   var layout = function(){
     // new ApplicationView().render();
-    // new SearchBarView().render();
+     // new SearchBarView().render();
   }
 
   var initialize = function() {
