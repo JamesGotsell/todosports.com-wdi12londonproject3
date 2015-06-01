@@ -25,22 +25,6 @@ define([
       options.dataType = "jsonp";
       return Backbone.sync(method, collection, options);
     },
-    //  parse : function(response){
-    //   this.page = response.page;
-    //   this.perPage = response.per_page;
-    //   this.total = response.total
-    //   return response.model;
-    // },
-    // pageInfo: function(){
-    // var infor = {
-    //     total: this.total,
-    //     page: this.page,
-    //     perPage: this.per_page, 
-    //     pages: Math.ceil(this.total/ this.perPage),
-    //     prev: false, 
-    //     next: false
-    //   };
-    // },
     state: {
         pageSize: 10,
         sortKey: "updated",
@@ -56,15 +40,8 @@ define([
            "-1": "asc",
            "1": "desc"
          }
-      }, 
-      // var SearchResults = Backbone.Collection.extend({
-      //   url: function(){
-      //     return "http://api.eventful.com/json/events/search?q="+query+"&location="+location+"&app_key=" + api_key 
-      //   },
-      //   search: function(){
-          
-      //   }
-      // });
+      }
+    
   }); 
   return response.events.event
 });
