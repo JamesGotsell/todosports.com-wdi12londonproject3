@@ -8,15 +8,17 @@ require.config({
     underscore: 'lib/underscore',
     backbone: 'lib/backbone',
     text: 'lib/text',
-    paginator: 'lib/paginator'
+    paginator: 'lib/paginator',
+    bourbon: 'lib/modules/bourbon-overrides'
   }
 });
 
 require([
   'app',
   'jquery',
-  'jquery_ujs'
-], function(App, jquery){
+  'jquery_ujs',
+  'bourbon'
+], function(App, jquery, Bourbon){
   if ($('main').length > 0) {
     App.initialize();
   }
