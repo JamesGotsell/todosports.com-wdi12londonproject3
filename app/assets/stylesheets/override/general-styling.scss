@@ -20,6 +20,7 @@ ul.events {
 
 .outer-container {
   @include outer-container;
+  margin: 10 0 10 0;
 }
 
 .stuff, .home{
@@ -28,23 +29,30 @@ ul.events {
 
 }
 
-h1, h2 {
+h1 ,h2{
   padding: 20px;
   text-align: center;
   font-size: 25px;
 }
+h2.edit {
+  margin: 20px;
+  text-align: center;
+}
 
 .buttons , .tickets{ 
-  
+
   padding: 20px;
   font-size: 20px;
 }
 
 a {
   color: green;
+  padding: 10px;
 }
 
 table { 
   margin: 0 auto;
   max-width: 960px;
 }
+
+
