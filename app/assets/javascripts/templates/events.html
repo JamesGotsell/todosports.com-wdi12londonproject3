@@ -13,19 +13,21 @@
   </tr>
   <tbody>
     <% _.each(events, function(event){ %>
-      <tr>
-        <td><%= event.id %></td>
-        <td><a href="/#events/<%= event.id %>"><%= event.title %></td>
-        <td><%= event.description %></td>
-        <td><%= event.city_name %></td>
-        <td><%= event.venue_name %></td>
-        <td><%= event.start_time %></td>
-        <td><a class="add" data-id="<%= event.id %>" href="#">add to MyEvents</a></td>
-      </tr>
+    <tr>
+      <td><%= event.id %></td>
+      <td><a href="/#events/<%= event.id %>"><%= event.title %></td>
+      <td><%= event.description %></td>
+      <td><%= event.city_name %></td>
+      <td><%= event.venue_name %></td>
+      <td><%= event.start_time %></td>
+      <td><a class="add" data-id="<%= event.id %>" href="#">add to MyEvents</a></td>
+    </tr>
     <% }); %>
   </tbody>
 </table>
 
 <br/>
-<button class="next_page">next page</button>
-<button class="previous_page">previous page</button>
+<div class="buttons">
+  <button class="next_page">next page</button>
+  <button class="previous_page">previous page</button>
+</div>

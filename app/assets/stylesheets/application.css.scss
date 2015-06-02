@@ -10,6 +10,11 @@
 @import "footer";
 @import "hero";
 @import "table";
+@import "icon-bullet";
 
 
 /* OVERRIDE FILES */
+
+@import "override/footer-override";
+@import "override/general-styling";
+@import "override/navbar-override";

@@ -19,17 +19,22 @@ define([
         'click #search' : 'search'
       }, 
 // create collection in here than
-      search: function(){
-        var searchTerm = $('#search').val()
-        console.log( searchTerm) 
+search: function(){
+  var searchTerm = $('#search').val()
+  console.log( searchTerm) 
         // how to get this search from the search bar input to search and display the api
         url: "/events/search/" + searchTerm 
         // use /events/search/ + query -- query to api, its done via the rails side 
         console.log("hello")
         // var search term is var query within the api! 
-        },
+        $.ajax({
+          method: "GET",
+          uurl: "/events/search/" + searchTerm, 
+          dataType: "jsonp" 
+        });
+      }
 
     });
-});
+  });
     
 
