@@ -1,30 +1,18 @@
 <!-- i need to get the events information to show here and the google maps with markers-->
 <h1>Listing events</h1>
-<p>google map needs to be inserted here</p>
 
-<table id="events-table">
-  <tr>
-    <th>id</th>
-    <th>Title</th>
-    <th>description</th>
-    <th>city</th>
-    <th>venue</th>
-    <th>start time</th>
-  </tr>
-  <tbody>
-    <% _.each(events, function(event){ %>
-    <tr>
-      <td><%= event.id %></td>
-      <td><a href="/#events/<%= event.id %>"><%= event.title %></td>
-      <td><%= event.description %></td>
-      <td><%= event.city_name %></td>
-      <td><%= event.venue_name %></td>
-      <td><%= event.start_time %></td>
-      <td><a class="add" data-id="<%= event.id %>" href="#">add to MyEvents</a></td>
-    </tr>
-    <% }); %>
-  </tbody>
-</table>
+<ul class="events">
+  <% _.each(events, function(event){ %>
+    <li>
+      <ul>
+        <li><h3><%= event.title %> in <%= event.city_name %></h3></li>
+        <li>At <%= event.venue_name %> - <%= event.start_time %></li>
+        <li><%= event.description %></li>
+        <li><button class="add btn" data-id="<%= event.id %>">Add</button></li>
+      </ul>
+    </li>
+  <% }); %>
+</ul>
 
 <br/>
 <div class="buttons">

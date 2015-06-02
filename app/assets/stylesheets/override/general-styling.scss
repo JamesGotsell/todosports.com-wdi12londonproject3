@@ -1,20 +1,30 @@
 body{
-  font-family:"helvetica";
+  font-family: 'Fira Mono'; 
   margin: 0 auto;
       div{
         margin: 0 auto;
           p{
             margin: 0 auto;
-            width: 50%;
+            width: 75%;
             padding-bottom: 30px;
           }
       }
 
 }
 
+ul.events {
+  li {
+    margin: 0 0 20px;
+  }
+}
+
+.outer-container {
+  @include outer-container;
+}
+
 .stuff, .home{
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
 
 }
 
@@ -25,6 +35,16 @@ h1, h2 {
 }
 
 .buttons , .tickets{ 
+
   padding: 20px;
   font-size: 20px;
+}
+
+a {
+  color: green;
+}
+
+table { 
+  margin: 0 auto;
+  max-width: 960px;
 }
