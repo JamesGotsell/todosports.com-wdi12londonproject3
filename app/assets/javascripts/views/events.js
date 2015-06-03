@@ -48,6 +48,7 @@ define([
     submitSearch: function(){
       var self = this;
       var query = $("#search").val();
+      // is the query correct? i think i can just add hard code the location here! 
       $.getJSON("/events/search?query="+encodeURIComponent(query)+"&page=1", function(data){
         var events = data.events; // raw json objects
 
@@ -57,6 +58,10 @@ define([
         // IV.  re-render the view , because the collection now contains the new events gathered with the search , the list of events will be the search results
         // V. COme back to gerry for pagination 
         debugger
+        self.collection.reset(); 
+        this.collection = new Event(data.events)
+
+
       })
     },
 
