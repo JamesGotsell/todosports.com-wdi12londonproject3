@@ -46,6 +46,7 @@
 
       </ul>
     </nav>
+    <% if user_signed_in? %>
     <div class="navigation-tools">
      <div class="search-bar">
        <form role="search">
@@ -55,6 +56,7 @@
          </button>
        </form>
      </div>
+     <% end %> 
      <!--    <a href="javascript:void(0)" class="sign-up">Sign Up</a> -->
 
    </div>
