@@ -56,13 +56,7 @@ define([
         // III. Push every event in self.collection 
         // IV.  re-render the view , because the collection now contains the new events gathered with the search , the list of events will be the search results
         // V. Come back to gerry for pagination 
-        
-
         self.collection.reset(); 
-        
-        
-
-        
         self.collection.add(events)
         self.render(events)
       })
