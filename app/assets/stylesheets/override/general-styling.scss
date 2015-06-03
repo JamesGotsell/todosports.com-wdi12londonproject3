@@ -12,9 +12,11 @@ body{
 
 }
 
-ul.events {
+ul.events-fade-in {
+    display: inline;
   li {
     margin: 0 0 20px;
+
   }
 }
 
@@ -50,7 +52,10 @@ h2.edit {
   background-color: black;
 }
 
+
+
 a {
+  margin: 10px;
   color: green;
   padding: 10px;
 }
@@ -83,7 +88,16 @@ form {
 
 .events ul {
   padding-top: 25px;
-  display: inline;
+  display: inline;     
+}
 
-      
+// responsive 
+
+@media only screen and (max-width: 640px){
+  .truncate {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+     text-overflow: ellipsis;
+  }
 }

@@ -15,7 +15,7 @@
       <ul>
         <li><h3><%= event.title %> in <%= event.city_name %></h3></li>
         <li>At <%= event.venue_name %> - <%= event.start_time %></li>
-        <li><%= event.description %></li>
+        <li class="truncate"><%= event.description %></li>
         <li><button class="add btn" data-id="<%= event.id %>">Add</button></li>
       </ul>
     </li>

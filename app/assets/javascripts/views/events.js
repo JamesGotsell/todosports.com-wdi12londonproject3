@@ -34,7 +34,7 @@ define([
         });
       }
       var self = this;
-      this.currentPage = pageQuery ? pageQuery : 1l
+      this.currentPage = pageQuery ? pageQuery : 1;
       var template = _.template(EventsTemplate);
       this.$el.html(template({events: data}));
       addEventHandler('.next_page', 'getNextPage');
