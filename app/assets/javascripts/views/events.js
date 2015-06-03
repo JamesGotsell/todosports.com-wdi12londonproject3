@@ -16,14 +16,13 @@ define([
       this.collection = new PageableCollection();
 
       this.collection.getPage(1).done(function(data){
-        console.log(data)
-        self.render(data)
+        self.render(data.events.event)
       });
     },
 
     // using jQuery  for the click functions
     render: function(data){
-
+      console.log(data)
       function addEventHandler(selector, fnName) {
         self.$el.find(selector).click(function () {
           // if fnName is abc then self.collection[fnName]() is exactly the same as self.collection.abc()
@@ -34,7 +33,7 @@ define([
       }
       var self = this;
       var template = _.template(EventsTemplate);
-      this.$el.html(template({events: data.events.event}));
+      this.$el.html(template({events: data}));
       addEventHandler('.next_page', 'getNextPage');
       addEventHandler('.previous_page', 'getPreviousPage');
       return this.el;
@@ -57,16 +56,15 @@ define([
         // III. Push every event in self.collection 
         // IV.  re-render the view , because the collection now contains the new events gathered with the search , the list of events will be the search results
         // V. Come back to gerry for pagination 
-        debugger
-        // i've cleared this collection with .reset()
-        self.collection.reset(); 
-        // i've created a new instance of Event. 
-        //  
-        var searchEvent = new Event(events);
-        // pushed the new instance of event into collection 
-        self.collection.push(Event); 
-        console.log(this)
+        
 
+        self.collection.reset(); 
+        
+        
+
+        
+        self.collection.add(events)
+        self.render(events)
       })
     },
 
