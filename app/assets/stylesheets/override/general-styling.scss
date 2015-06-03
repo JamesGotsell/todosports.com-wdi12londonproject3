@@ -21,6 +21,9 @@ ul.events {
 .outer-container {
   @include outer-container;
   margin: 10 0 10 0;
+  text-align: center;
+  max-width: 75%; 
+
 }
 
 .stuff, .home{
@@ -40,10 +43,11 @@ h2.edit {
   text-align: center;
 }
 
-.buttons , .tickets{ 
-
+.add.btn , .tickets{ 
+  margin-top: 15px;
   padding: 20px;
   font-size: 20px;
+  background-color: black;
 }
 
 a {
@@ -60,3 +64,26 @@ table {
   display: inline;
 }
 
+div.edit h3 , p , a{
+  padding: 10px; 
+  text-align: center;
+
+}
+div.edit {
+  padding: 20px;
+}
+
+form {
+  margin: 0 auto;
+  width: 50%;
+}
+.buttons{
+  padding-bottom: 50px;
+}
+
+.events ul {
+  padding-top: 25px;
+  display: inline;
+
+      
+}

@@ -23,8 +23,8 @@ define([
     },
 
     // using jQuery  for the click functions
-    render: function(data){
-      console.log(data)
+    render: function(data, pageQuery){
+      
       function addEventHandler(selector, fnName) {
         self.$el.find(selector).click(function () {
           // if fnName is abc then self.collection[fnName]() is exactly the same as self.collection.abc()
@@ -34,23 +34,30 @@ define([
         });
       }
       var self = this;
+      this.currentPage = pageQuery ? pageQuery : 1l
       var template = _.template(EventsTemplate);
       this.$el.html(template({events: data}));
       addEventHandler('.next_page', 'getNextPage');
+      // when the .next_page or .previous_page throw an error on the events template title property of null
+      // the page doesn't render the next 10 events, why doesn't it render!!! 
       addEventHandler('.previous_page', 'getPreviousPage');
       return this.el;
+
     },
 
     events: {
-      'click .add'           : 'addToFavourites',
-      'click #submit-search' : 'submitSearch'
+      'click .add'                  : 'addToFavourites',
+      'click #submit-search'        : 'submitSearch',
+      'click button.next_page'      : 'goToNextPage',
+      'click button.previous_page'  : 'goToPreviousPage'
      },
 
-    submitSearch: function(){
+    submitSearch: function(page){
       var self = this;
-      var query = $("#search").val();
+      this.query = $("#search").val();
+      var pageQuery = page ? page : 1; 
       // is the query correct? i think i can just add hard code the location here! 
-      $.getJSON("/events/search?query="+encodeURIComponent(query)+"&page=1", function(data){
+      $.getJSON("/events/search?query="+encodeURIComponent(this.query)+"&page="+ pageQuery, function(data){
         var events = data.events; // raw json objects
 
         // I.   Flush self.collection
@@ -60,7 +67,9 @@ define([
         // V. Come back to gerry for pagination 
         self.collection.reset(); 
         self.collection.add(events)
-        self.render(events)
+        self.render(events, pageQuery)
+        // when the next_page  is click the collection isn't re-rendering on the events page 
+       
       })
     },
 
@@ -118,6 +127,13 @@ define([
           }
         });
       })
+    },
+
+    goToNextPage: function(){
+    
+    },
+    goToPreviousPage: function(){
+      console.log("previous_page")
     }
   });
 

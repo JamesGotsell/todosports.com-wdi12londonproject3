@@ -4,7 +4,7 @@
 <% _.each(favourites, function(favourite){ %>
   
       <ul>
-        <li><h3><%= favourite.get("event").title %> In <%= favourite.get("event").city_name %> </h3></li> 
+        <li><h3><%= favourite.get("event").title %>  <%= favourite.get("event").city_name %> </h3></li> 
         <li>At the <%= favourite.get("event").venue_name %> - <%= favourite.get("event").start_time %></li</li>
         <li><%= favourite.get("event").description%></li>
         <li><button class="add btn">Buy Ticket</button></li>
