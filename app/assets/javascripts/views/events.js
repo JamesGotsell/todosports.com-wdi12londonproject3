@@ -59,7 +59,8 @@ define([
         // V. COme back to gerry for pagination 
         debugger
         self.collection.reset(); 
-        this.collection = new Event(data.events)
+        self.collection = new Event();
+        this.collection.add(new Event(events))
 
 
       })
