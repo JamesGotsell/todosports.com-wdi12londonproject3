@@ -24,14 +24,19 @@ define([
       return this.el;
     }, 
     events: {
-      "click .add btn" : "buyTicket"
+      "click button.add.btn" : "buyTicket",
+      "click button.google_calender" : "googleCalender"
     },
 
     buyTicket: function(){
-      console.log("clicked")
-      alert("you have bought a ticket for this event")
-    }
+      console.log("clicked");
+      alert("you have bought a ticket for this event");
+    },
 
+    googleCalender: function(){
+      console.log('added to google calender');
+      alert("you added this event this your google calender");
+    } 
   });
 
   return myEventsView;
