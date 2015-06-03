@@ -58,9 +58,14 @@ define([
         // IV.  re-render the view , because the collection now contains the new events gathered with the search , the list of events will be the search results
         // V. Come back to gerry for pagination 
         debugger
+        // i've cleared this collection with .reset()
         self.collection.reset(); 
-        self.collection = new Event();
-        this.collection.add(events);
+        // i've created a new instance of Event. 
+        //  
+        var searchEvent = new Event(events);
+        // pushed the new instance of event into collection 
+        self.collection.push(Event); 
+        console.log(this)
 
       })
     },
