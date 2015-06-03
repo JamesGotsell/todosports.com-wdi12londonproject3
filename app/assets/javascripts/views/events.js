@@ -56,12 +56,11 @@ define([
         // II.  Create new instances of Event() Model with every object in data.events
         // III. Push every event in self.collection 
         // IV.  re-render the view , because the collection now contains the new events gathered with the search , the list of events will be the search results
-        // V. COme back to gerry for pagination 
+        // V. Come back to gerry for pagination 
         debugger
         self.collection.reset(); 
         self.collection = new Event();
-        this.collection.add(new Event(events))
-
+        this.collection.add(events);
 
       })
     },
@@ -123,34 +122,6 @@ define([
     }
   });
 
-
-  // var SearchBarView = Backbone.View.extend({
-  //   el: "article",
-
-  //   render: function() {
-  //     var template = _.template(SearchBarTemplate);
-  //     this.$el.html(template());
-  //     return this.el;
-  //   },
-
-  //   events: {
-  //     'click #search' : 'search'
-  //   }, 
-
-  //   search: function(){ 
-  //     var searchTerm = $('#search').val()
-  //     this.collection = new PageableCollection(1); 
-  //     self.render(this)
-  //   }, 
-  // });
-
-  // // var Search = Backbone.PageableCollection.extend({
-  // //   model: Event, 
-  // //   initialize: function(searchTerm){
-  // //       this.query = searchTerm.query
-  // //   },
-
-  // })
 
   return EventsView;
   return SearchBarView;
