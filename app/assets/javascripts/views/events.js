@@ -23,6 +23,7 @@ define([
 
     // using jQuery  for the click functions
     render: function(data){
+
       function addEventHandler(selector, fnName) {
         self.$el.find(selector).click(function () {
           // if fnName is abc then self.collection[fnName]() is exactly the same as self.collection.abc()
@@ -40,7 +41,23 @@ define([
     },
 
     events: {
-      'click .add' : 'addToFavourites'
+      'click .add'           : 'addToFavourites',
+      'click #submit-search' : 'submitSearch'
+     },
+
+    submitSearch: function(){
+      var self = this;
+      var query = $("#search").val();
+      $.getJSON("/events/search?query="+encodeURIComponent(query)+"&page=1", function(data){
+        var events = data.events; // raw json objects
+
+        // I.   Flush self.collection
+        // II.  Create new instances of Event() Model with every object in data.events
+        // III. Push every event in self.collection 
+        // IV.  re-render the view , because the collection now contains the new events gathered with the search , the list of events will be the search results
+        // V. COme back to gerry for pagination 
+        debugger
+      })
     },
 
     addToFavourites: function(event){
