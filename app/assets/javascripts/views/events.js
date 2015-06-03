@@ -1,3 +1,5 @@
+// pagination not working because it should render the next 10 results
+
 define([
   'jquery',
   'underscore',
