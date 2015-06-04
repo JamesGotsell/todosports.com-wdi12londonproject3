@@ -8,6 +8,9 @@
        <img src="/assets/png/search-icon.png" alt="Search Icon">
      </button>
  </div>
+<% if(events.length == 0){ %>
+  <h2>NO events correspond to this search ! SHOOT AGAIN</h2>
+<%}else{ %>
 
 <ul class="events">
   <% events.each(function(event){ %>
@@ -22,6 +25,8 @@
     </li>
   <% }); %>
 </ul>
+
+<% } %>
 
 <br/>
 <div class="buttons">
