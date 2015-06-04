@@ -34,7 +34,7 @@ class EventsController < ApplicationController
   end
 
   def search
-    @eventful_bridge = EventFulApi.new(params[:query], params[:location], params[:page])
+    @eventful_bridge = EventFulApi.new(params[:query], params[:page])
     render json: @eventful_bridge.search
   end
 

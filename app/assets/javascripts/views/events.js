@@ -7,73 +7,43 @@ define([
   'collections/events',
   'models/event',
   'text!templates/events'
- ], function($, _, Backbone, PageableCollection, Event, EventsTemplate, SearchBarTemplate){
+ ], function($, _, Backbone, PageableCollection, Event, EventsTemplate){
 
-  var api_key  = EVENTFUL_API_KEY;
 
   var EventsView = Backbone.View.extend({
     el: "main",
     initialize: function(){
       var self = this;
       this.collection = new PageableCollection();
-
-      this.collection.getPage(1).done(function(data){
-        self.render(data.events.event)
-      });
+      this.pageQuery = 1
+      this.query = "sport"
+      this.refreshData()
     },
 
-    // using jQuery  for the click functions
-    render: function(data, pageQuery){
-      
-      function addEventHandler(selector, fnName) {
-        self.$el.find(selector).click(function () {
-          // if fnName is abc then self.collection[fnName]() is exactly the same as self.collection.abc()
-          self.collection[fnName]().done(function(data){
-            self.render(data)
-          })
-        });
-      }
-      var self = this;
-      this.currentPage = pageQuery ? pageQuery : 1;
-      var template = _.template(EventsTemplate);
-      this.$el.html(template({events: data}));
-      addEventHandler('.next_page', 'getNextPage');
-      // when the .next_page or .previous_page throw an error on the events template title property of null
-      // the page doesn't render the next 10 events, why doesn't it render!!! 
-      addEventHandler('.previous_page', 'getPreviousPage');
-      return this.el;
+    goToNextPage: function(){
+      this.pageQuery++
+      this.refreshData()
+    },
+    goToPreviousPage: function(){
+      this.pageQuery--
+      this.refreshData()
+    },
 
+    render: function(){
+      var self = this;
+      var template = _.template(EventsTemplate);
+      this.$el.html(template({events: self.collection, currentPage: this.pageQuery}));
+      return this.el;
     },
 
     events: {
       'click .add'                  : 'addToFavourites',
-      'click #submit-search'        : 'submitSearch',
+      'click #submit-search'        : 'refreshData',
       'click button.next_page'      : 'goToNextPage',
       'click button.previous_page'  : 'goToPreviousPage'
      },
 
-    submitSearch: function(page){
-      var self = this;
-      this.query = $("#search").val();
-      var pageQuery = page ? page : 1; 
-
-      // is the query correct? i think i can just add hard code the location here! 
-      $.getJSON("/events/search?query="+encodeURIComponent(this.query)+"&page="+ pageQuery, function(data){
-        var events = data.events; // raw json objects
-
-        // I.   Flush self.collection
-        // II.  Create new instances of Event() Model with every object in data.events
-        // III. Push every event in self.collection 
-        // IV.  re-render the view , because the collection now contains the new events gathered with the search , the list of events will be the search results
-        // V. Come back to gerry for pagination 
-        self.collection.reset(); 
-        self.collection.add(events)
-        self.render(events, pageQuery)
-        // when the next_page  is click the collection isn't re-rendering on the events page 
-       
-      })
-    },
-
+    
     addToFavourites: function(event){
       event.preventDefault();
       var event_id = $(event.currentTarget).data("id");
@@ -130,22 +100,27 @@ define([
       })
     },
 
-    goToNextPage: function(){
-      this.pageQuery++
-      this.refreshData()
-    },
-    goToPreviousPage: function(){
-      this.pageQuery--
-      this.refreshData()
-    },
+    
 
-    refreshData: function(){
-      
+    refreshData: function(callback){
+      var self = this;
+      var uri = "/events/search"
+      if($("#search").length > 0 && $("#search").val().length > 0) 
+        this.query = $("#search").val()
+
+      var params = $.param({
+        query: this.query,
+        page: this.pageQuery
+      })
+
+      $.getJSON( [uri, "?", params].join("") , function(data){
+        self.collection.reset(); 
+        self.collection.add(data.events)
+        self.render()
+      })
     }
 
   });
 
-
   return EventsView;
-  return SearchBarView;
 });

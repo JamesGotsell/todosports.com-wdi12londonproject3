@@ -7,9 +7,10 @@ class EventFulApi
 
   URL = "http://api.eventful.com/json/events/search" 
 
-  def initialize(query, location, page_number)
-    @query = query
-    @location = location
+  DEFAULT_LOCATION = "London"
+
+  def initialize(query, page_number)
+    @query = query  
     @page_number = page_number
   end
 
@@ -17,7 +18,7 @@ class EventFulApi
   def search
     params = {
       q: @query,
-      location: @location,
+      location: DEFAULT_LOCATION,
       app_key: ENV["EVENTFUL_API_KEY"],
       page_number: @page_number
     }
