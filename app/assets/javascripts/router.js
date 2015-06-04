@@ -4,15 +4,13 @@ define([
   'backbone',
   'paginator',
   'views/application',
-  'views/search',
   'views/events',
-  'views/show',
   'views/myevents',
   'views/directions',
   'views/home',
   'views/about'
-], function($, _, Backbone, PageableColllection, ApplicationView, SearchBarView,
-     EventsView, ShowView, myEventsView, DirectionsView,  HomeView, AboutView){
+], function($, _, Backbone, PageableColllection, ApplicationView,
+     EventsView, myEventsView, DirectionsView,  HomeView, AboutView){
 
   var Router = Backbone.Router.extend({
 
