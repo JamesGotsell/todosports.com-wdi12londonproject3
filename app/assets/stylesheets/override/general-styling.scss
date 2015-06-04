@@ -51,17 +51,23 @@ h2.edit {
   background-color: black;
 }
 
-
+.hero-copy h1{
+  text-shadow: 1px 4px 2px black;
+  font-weight: 500;
+}
+.text_shadow {
+  text-shadow: 10px 10px 40px black;
+}
 
 a {
+  color: black;
   margin: 10px;
   padding: 10px;
+    a::hover{
+      color: white;
+    }
 }
 
-table { 
-  margin: 0 auto;
-  max-width: 960px;
-}
 
 .event li ul li   {
   display: inline;
@@ -115,5 +121,6 @@ form {
     overflow: hidden;
      text-overflow: ellipsis;
   }
+
   
 }

@@ -1,7 +1,6 @@
 @import "bourbon";
 @import "neat";
 @import "base/base"; // It's all about the base;
-
 @import "font-awesome";
 
 /* Reset */
@@ -18,5 +17,5 @@
 /* OVERRIDE FILES */
 
 @import "override/footer-override";
-@import "override/general-styling";
 @import "override/navbar-override";
+@import "override/general-styling";
