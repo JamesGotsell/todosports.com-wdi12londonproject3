@@ -30,12 +30,12 @@ define([
 
     buyTicket: function(){
       console.log("clicked");
-      alert("you have bought a ticket for this event");
+     
     },
 
     googleCalender: function(){
       console.log('added to google calender');
-      alert("you added this event this your google calender");
+      
     } 
   });
 
