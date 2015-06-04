@@ -9,7 +9,9 @@
      </button>
  </div>
 <% if(events.length == 0){ %>
-  <h2>NO events correspond to this search ! SHOOT AGAIN</h2>
+<div class="flash-error">
+  <span><h2>NO events correspond to this search !</h2></span>
+</div>  
 <%}else{ %>
 
 <ul class="events">

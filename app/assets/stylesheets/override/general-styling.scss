@@ -25,7 +25,6 @@ ul.events-fade-in {
   margin: 10 0 10 0;
   text-align: center;
   max-width: 75%; 
-
 }
 
 .stuff, .home{
@@ -93,7 +92,20 @@ form {
 .fa-5x {
   padding: 10px;
 }
-
+.shared-links{
+  margin: 20px;
+    a {
+      margin: 10px;
+      padding: 10px;
+    }
+}
+.forgot-password{
+  height: 500px;
+  width: 200px;
+}
+.actions {
+  margin: 15px;
+}
 // responsive 
 
 @media only screen and (max-width: 640px){
