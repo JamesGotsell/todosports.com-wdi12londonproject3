@@ -34,8 +34,9 @@ class EventsController < ApplicationController
   end
 
   def search
-    @events = EventFulApi.search(params[:query], params[:page])
-    render json: @events
+    events = EventFulApi.search(params[:query], params[:page])
+    events_list = events || []
+    render json: events_list
   end
 
   # PATCH/PUT /events/1

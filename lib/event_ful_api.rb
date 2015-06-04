@@ -24,7 +24,7 @@ class EventFulApi
       }
 
       results = JSON.parse HTTParty.get(build_url("/search", params))
-      results["events"]["event"]
+      results["events"] && results["events"]["event"]
     end
 
     def find(event_id)
