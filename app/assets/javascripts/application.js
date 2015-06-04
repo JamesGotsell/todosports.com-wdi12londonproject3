@@ -18,6 +18,7 @@ require([
   'jquery',
   'jquery_ujs',
   'bourbon'
+
 ], function(App, jquery, Bourbon){
   if ($('main').length > 0) {
     App.initialize();
