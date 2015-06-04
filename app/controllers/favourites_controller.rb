@@ -6,7 +6,10 @@ class FavouritesController < ApplicationController
   end
 
   def create 
-    @favourite = current_user.favourites.new(favourite_params)
+    event_data = EventFulApi.find params[:event_id]
+    event = Event.find_or_create_by(event_data)
+
+    @favourite = current_user.favourites.new(event: event)
     respond_to do |format|
       if @favourite.save
         format.json { render json: @favourite.event, status: :created, location: @favourite.event }
@@ -16,8 +19,4 @@ class FavouritesController < ApplicationController
     end
   end 
 
-  private
-    def favourite_params
-      params.require(:favourite).permit(:user_id, :event_id)
-    end
 end 
