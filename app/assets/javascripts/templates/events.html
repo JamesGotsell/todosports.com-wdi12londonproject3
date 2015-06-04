@@ -12,7 +12,9 @@
 <ul class="events">
   <% _.each(events, function(event){ %>
     <li>
+
       <ul>
+
         <li><h3><%= event.title %> in <%= event.city_name %></h3></li>
         <li>At <%= event.venue_name %> - <%= event.start_time %></li>
         <li class="truncate"><%= event.description %></li>

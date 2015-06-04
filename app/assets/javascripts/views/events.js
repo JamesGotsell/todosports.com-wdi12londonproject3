@@ -56,6 +56,7 @@ define([
       var self = this;
       this.query = $("#search").val();
       var pageQuery = page ? page : 1; 
+
       // is the query correct? i think i can just add hard code the location here! 
       $.getJSON("/events/search?query="+encodeURIComponent(this.query)+"&page="+ pageQuery, function(data){
         var events = data.events; // raw json objects
@@ -130,11 +131,18 @@ define([
     },
 
     goToNextPage: function(){
-    
+      this.pageQuery++
+      this.refreshData()
     },
     goToPreviousPage: function(){
-      console.log("previous_page")
+      this.pageQuery--
+      this.refreshData()
+    },
+
+    refreshData: function(){
+      
     }
+
   });
 
 
