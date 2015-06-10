@@ -2,13 +2,9 @@ require "httparty"
 require "json"
 
 class EventFulApi
-
-  ITEMS_PER_PAGE = 20
-
-  URL = "http://api.eventful.com/json/events" 
-
-  DEFAULT_LOCATION = "London"
-
+  ITEMS_PER_PAGE    = 20
+  URL               = "http://api.eventful.com/json/events" 
+  DEFAULT_LOCATION  = "London"
 
   class << self
     def build_url(path, params)

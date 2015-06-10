@@ -6,9 +6,9 @@ define([
   'backbone',
   'collections/events',
   'models/event',
+  'lib/backbone.googlemaps-min',
   'text!templates/events'
- ], function($, _, Backbone, PageableCollection, Event, EventsTemplate){
-
+ ], function($, _, Backbone, PageableCollection, Event, GoogleMap, EventsTemplate){
 
   var EventsView = Backbone.View.extend({
     el: "main",
@@ -18,6 +18,9 @@ define([
       this.pageQuery = 1
       this.query = "sport"
       this.refreshData()
+
+      this.map;
+      this.infowindow;
     },
 
     goToNextPage: function(){
@@ -33,6 +36,7 @@ define([
       var self = this;
       var template = _.template(EventsTemplate);
       this.$el.html(template({events: self.collection, currentPage: this.pageQuery}));
+      self.mapInitialize();
       return this.el;
     },
 
@@ -42,7 +46,6 @@ define([
       'click button.next_page'      : 'goToNextPage',
       'click button.previous_page'  : 'goToPreviousPage'
      },
-
     
     addToFavourites: function(event){
       event.preventDefault();
@@ -66,15 +69,54 @@ define([
         page: this.pageQuery
       })
 
-      $.getJSON( [uri, "?", params].join("") , function(data){
+      $.getJSON( [uri, "?", params].join(""), function(data){
         self.collection.reset(); 
         self.collection.add(data.events)
         self.render()
       })
-    }
-     // google maps stuff / markers / geolocation 
-     //  i need to put the google maps js stuff and inject it into 
-  });
+    },
 
-  return EventsView;
+    // addInfoWindowForCamera: function(camera, marker){
+    //   google.maps.event.addListener(marker, 'click', function() {
+    //     file = camera.file;
+    //     if(infowindow != undefined) infowindow.close()
+    //     infowindow = new google.maps.InfoWindow({
+    //         content: "<img src='http://www.tfl.gov.uk/tfl/livetravelnews/trafficcams/cctv/"+file+"'><p>"+camera.location+"("+camera.postcode+")</p>"
+    //     });
+        
+    //     infowindow.open(map,this);
+    //   });
+    // },
+
+    createMarkerForCamera: function(camera){
+      var latlng = new google.maps.LatLng(camera.lat, camera.lng);
+      var map = this.map;
+      marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        title:"Hello World!",
+      });
+      // addInfoWindowForCamera(camera, marker)
+    },
+
+    mapEvents: function(){
+      var self = this;
+      $.each(self.collection, function(i, location){
+        console.log(location);
+        // createMarkerForCamera(camera)
+      })
+    },
+
+    mapInitialize: function(){
+      var mapcanvas = document.getElementById('map-canvas');
+      var mapOptions = {
+        zoom: 12,
+        center: new google.maps.LatLng(51.506178,-0.088369),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      this.map = new google.maps.Map(mapcanvas, mapOptions);
+      this.mapEvents();
+    }
+  });
+ return EventsView;
 });
