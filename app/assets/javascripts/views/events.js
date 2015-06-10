@@ -72,7 +72,8 @@ define([
         self.render()
       })
     }
-
+     // google maps stuff / markers / geolocation 
+     //  i need to put the google maps js stuff and inject it into 
   });
 
   return EventsView;
