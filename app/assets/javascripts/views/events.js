@@ -72,38 +72,39 @@ define([
       $.getJSON( [uri, "?", params].join(""), function(data){
         self.collection.reset(); 
         self.collection.add(data.events)
+        console.log(self.collection)
         self.render()
       })
     },
 
-    // addInfoWindowForCamera: function(camera, marker){
-    //   google.maps.event.addListener(marker, 'click', function() {
-    //     file = camera.file;
-    //     if(infowindow != undefined) infowindow.close()
-    //     infowindow = new google.maps.InfoWindow({
-    //         content: "<img src='http://www.tfl.gov.uk/tfl/livetravelnews/trafficcams/cctv/"+file+"'><p>"+camera.location+"("+camera.postcode+")</p>"
-    //     });
+    addInfoWindowForEvent: function(location, marker){
+      google.maps.event.addListener(marker, 'click', function() {
         
-    //     infowindow.open(map,this);
-    //   });
-    // },
+        if(this.infowindow != undefined) infowindow.close()
+        infowindow = new google.maps.InfoWindow({
+            content: "<p>" + location.get('title') + location.get('') "</p>"
+        });
+        
+        infowindow.open(this.map,this);
+      });
+    },
 
-    createMarkerForCamera: function(camera){
-      var latlng = new google.maps.LatLng(camera.lat, camera.lng);
+    createMarkerForEvent: function(location){
+      var self = this;
+      var latlng = new google.maps.LatLng(location.get("latitude"), location.get("longitude"));
       var map = this.map;
       marker = new google.maps.Marker({
         position: latlng,
         map: map,
         title:"Hello World!",
       });
-      // addInfoWindowForCamera(camera, marker)
+       self.addInfoWindowForEvent(location, marker)
     },
 
     mapEvents: function(){
       var self = this;
-      $.each(self.collection, function(i, location){
-        console.log(location);
-        // createMarkerForCamera(camera)
+      $.each(self.collection.models, function(i, location){
+        self.createMarkerForEvent(location);
       })
     },
 
