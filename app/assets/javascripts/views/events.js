@@ -82,7 +82,7 @@ define([
         
         if(this.infowindow != undefined) infowindow.close()
         infowindow = new google.maps.InfoWindow({
-            content: "<p>" + location.get('title') + location.get('') "</p>"
+            content: "<p>" + location.get('title') + location.get('city_name') + location.get('venue_name') + location.get('start_time') + location.get('description') + "</p>"
         });
         
         infowindow.open(this.map,this);
