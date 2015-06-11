@@ -2,45 +2,44 @@
 
 <h1>Events</h1>
 <div id="map-canvas"></div>
- <div class="search-bar">
-     <input type="search" id="search" placeholder="Enter Search" />
-     <button type="submit" id="submit-search">
-       <img src="/assets/png/search-icon.png" alt="Search Icon">
-     </button>
- </div>
+<div class="search-bar">
+ <input type="search" id="search" placeholder="Enter Search" />
+ <button type="submit" id="submit-search">
+   <img src="/assets/png/search-icon.png" alt="Search Icon">
+ </button>
+</div>
 
 
 <div class="navigation-tools">
 
-<%# if(events.length == 0){ %>
-<div class="flash-error">
-  <span><h2>NO events correspond to this search !</h2></span>
-</div>  
-<%}else{ %>
+  <% if(events.length == 0){ %>
+  <div class="flash-error">
+    <span><h2>NO events correspond to this search !</h2></span>
+  </div>  
+  <%}else{ %>
 
-<ul class="events">
+  <ul class="events">
 
-  <%# events.each(function(event){ %>
-        <li>
+    <% events.each(function(event){ %>
+    <li> 
+      <ul>
+        <li><h3><%= event.get("title") %> in <%= event.get("city_name") %></h3></li>
+        <li>At <%= event.get("venue_name") %> - <%= event.get("start_time") %></li>
+        <li class="truncate"><%= event.get("description") %></li>
+        <li><button class="add btn" data-id="<%= event.get("id") %>">Add</button></li>
+      </ul>
+    </li>        
+    <% }); %>
+  </ul>
 
-                <ul>
-                  <li><h3><%#= event.get("title") %> in <%#= event.get("city_name") %></h3></li>
-                  <li>At <%#= event.get("venue_name") %> - <%#= event.get("start_time") %></li>
-                  <li class="truncate"><%#= event.get("description") %></li>
-                  <li><button class="add btn" data-id="<%= event.get("id") %>">Add</button></li>
-                </ul>
-        </li>
-    <%# }); %>
-</ul>
 
-
-<%#} %>
+  <%} %>
 
 </div>
 
 <div class="buttons">
   <button class="next_page">next page</button>
-  <%# if(currentPage > 1){%>
-    <button class="previous_page">previous page</button>
-  <%# } %>
+  <% if(currentPage > 1){%>
+  <button class="previous_page">previous page</button>
+  <% } %>
 </div>
