@@ -12,13 +12,13 @@ body{
 
 }
 
-ul.events-fade-in {
-    display: inline;
-  li {
-    margin: 0 0 20px;
+// ul.events-fade-in {
+//     display: inline;
+//   li {
+//     margin: 0 0 20px;
 
-  }
-}
+//   }
+// }
 
 .outer-container {
   @include outer-container;
@@ -112,6 +112,38 @@ form {
 .actions {
   margin: 15px;
 }
+
+
+// events page
+#map-canvas {
+  width: 200px; 
+  height: 200px;
+}
+#map-canvas , .search-bar , #submit-search{
+  display: block;
+  float: left;
+}
+.events li{
+  background: lightgrey;
+  width: 70%;
+}
+.events ul li {
+ display: inline;
+ padding: 5px;
+ float: left;
+ // float: left;
+ // clear: both;
+}
+.next_page, .previous_page{
+  display: inline;
+  float: left;
+  clear: both;
+  margin: 20px;
+}
+
+// myevents page 
+
+
 // responsive 
 
 @media only screen and (max-width: 640px){
