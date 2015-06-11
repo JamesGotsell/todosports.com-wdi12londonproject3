@@ -1,4 +1,5 @@
 <!-- i need to get the events information to show here and the google maps with markers-->
+
 <h1>Events</h1>
 <div id="map-canvas"></div>
  <div class="search-bar">
@@ -11,7 +12,7 @@
 
 <div class="navigation-tools">
 
-<% if(events.length == 0){ %>
+<%# if(events.length == 0){ %>
 <div class="flash-error">
   <span><h2>NO events correspond to this search !</h2></span>
 </div>  
@@ -19,28 +20,27 @@
 
 <ul class="events">
 
-  <% events.each(function(event){ %>
+  <%# events.each(function(event){ %>
         <li>
 
                 <ul>
-                  <li><h3><%= event.get("title") %> in <%= event.get("city_name") %></h3></li>
-                  <li>At <%= event.get("venue_name") %> - <%= event.get("start_time") %></li>
-                  <li class="truncate"><%= event.get("description") %></li>
+                  <li><h3><%#= event.get("title") %> in <%#= event.get("city_name") %></h3></li>
+                  <li>At <%#= event.get("venue_name") %> - <%#= event.get("start_time") %></li>
+                  <li class="truncate"><%#= event.get("description") %></li>
                   <li><button class="add btn" data-id="<%= event.get("id") %>">Add</button></li>
                 </ul>
         </li>
-    <% }); %>
+    <%# }); %>
 </ul>
 
 
-<% } %>
+<%#} %>
 
 </div>
 
-<br/>
 <div class="buttons">
   <button class="next_page">next page</button>
-  <% if(currentPage > 1){%>
+  <%# if(currentPage > 1){%>
     <button class="previous_page">previous page</button>
-  <% } %>
+  <%# } %>
 </div>
