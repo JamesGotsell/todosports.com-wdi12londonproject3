@@ -120,12 +120,20 @@ form {
   height: 400px;
 }
 #map-canvas , .search-bar , #submit-search{
-  display: inline;
   float: left;
+  
 }
+
+.search-bar , #submit-search{
+  display: inline-block;
+  float: left; 
+  margin-top: 10px;
+  width: 200px
+}
+
 .events li{
   background: lightgrey;
-  width: 70%;
+  width: 100%;
 }
 .events ul li {
  display: inline;
