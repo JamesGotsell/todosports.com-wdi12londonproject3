@@ -120,7 +120,7 @@ form {
   height: 400px;
 }
 #map-canvas , .search-bar , #submit-search{
-  display: block;
+  display: inline;
   float: left;
 }
 .events li{
@@ -139,6 +139,10 @@ form {
   float: left;
   clear: both;
   margin: 20px;
+}
+.navigation-tools{
+  float: right;
+  width: 58%;
 }
 
 // myevents page 
