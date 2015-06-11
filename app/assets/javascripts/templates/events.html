@@ -18,20 +18,24 @@
 <%}else{ %>
 
 <ul class="events">
-  <% events.each(function(event){ %>
-    <li>
-      <ul>
 
-        <li><h3><%= event.get("title") %> in <%= event.get("city_name") %></h3></li>
-        <li>At <%= event.get("venue_name") %> - <%= event.get("start_time") %></li>
-        <li class="truncate"><%= event.get("description") %></li>
-        <li><button class="add btn" data-id="<%= event.get("id") %>">Add</button></li>
-      </ul>
-    </li>
-  <% }); %>
+  <% events.each(function(event){ %>
+        <li>
+
+                <ul>
+                  <li><h3><%= event.get("title") %> in <%= event.get("city_name") %></h3></li>
+                  <li>At <%= event.get("venue_name") %> - <%= event.get("start_time") %></li>
+                  <li class="truncate"><%= event.get("description") %></li>
+                  <li><button class="add btn" data-id="<%= event.get("id") %>">Add</button></li>
+                </ul>
+        </li>
+    <% }); %>
 </ul>
 
+
 <% } %>
+
+</div>
 
 <br/>
 <div class="buttons">
