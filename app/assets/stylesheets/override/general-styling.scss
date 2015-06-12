@@ -44,11 +44,13 @@ h2.edit {
   text-align: center;
 }
 
-.add.btn , .tickets{ 
+.add.btn{ 
   margin-top: 15px;
   padding: 20px;
   font-size: 20px;
   background-color: black;
+  float: right;
+  margin-right: 10px;
 }
 
 .hero-copy h1{
@@ -136,9 +138,10 @@ form {
   width: 100%;
 }
 .events ul li {
- display: inline;
+ display: inline-block;
  padding: 5px;
  float: left;
+ text-align:left;
  // float: left;
  // clear: both;
 }
@@ -151,6 +154,11 @@ form {
 .navigation-tools{
   float: right;
   width: 58%;
+}
+
+.navigation-tools ul li {
+  display: inline; 
+  float: right;
 }
 
 // myevents page 
