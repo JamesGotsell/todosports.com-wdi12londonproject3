@@ -2,41 +2,41 @@
 <!-- when you resize the window because of the block  -->
 
 <h1>Events</h1>
-        <div id="map-canvas"></div>
+<div id="map-canvas"></div>
 
 
-        <div class="navigation-tools">
+<div class="navigation-tools">
 
-                  <% if(events.length == 0){ %>
-                          <div class="flash-error">
-                            <h2><span>NO events correspond to this search !</span></h2>
-                          </div>  
-                  <%}else{ %>
+  <% if(events.length == 0){ %>
+  <div class="flash-error">
+    <h2><span>NO events correspond to this search !</span></h2>
+  </div>  
+  <%}else{ %>
 
-                 
-                   <ul class="events">
-                            <% events.each(function(event){ %>
-                       <li><h3><%= event.get("title") %> in <%= event.get("city_name") %></h3></li>
-                        <li>At <%= event.get("venue_name") %> - <%= event.get("start_time") %></li>
-                        <li class="truncate"><%= event.get("description") %></li>
-                        <li><button class="add btn" data-id="<%= event.get("id") %>">Add</button></li>   
-                        <% }); %>
-                    </ul>
-                 
-                  <%}  %>
-        </div>
+  
+  <ul class="events">
+    <% events.each(function(event){ %>
+    <li><h3><%= event.get("title") %> in <%= event.get("city_name") %></h3></li>
+    <li>At <%= event.get("venue_name") %> - <%= event.get("start_time") %></li>
+    <li class="truncate"><%= event.get("description") %></li>
+    <li><button class="add btn" data-id="<%= event.get("id") %>">Add</button></li>   
+    <% }); %>
+  </ul>
+  
+  <%}  %>
+</div>
 
-                    <div class="search-bar">
-                     <input type="search" id="search" placeholder="Enter Search" />
-                     <button type="submit" id="submit-search">
-                       <img src="/assets/png/search-icon.png" alt="Search Icon">
-                     </button>
-                    </div>
-                    
+<div class="search-bar">
+ <input type="search" id="search" placeholder="Enter Search" />
+ <button type="submit" id="submit-search">
+   <img src="/assets/png/search-icon.png" alt="Search Icon">
+ </button>
+</div>
 
-                    <div class="buttons">
-                      <button class="next_page">next page</button>
-                      <% if(currentPage > 1){%>
-                      <button class="previous_page">previous page</button>
-                      <% } %>
-                    </div>
+
+<div class="buttons">
+  <button class="next_page">next page</button>
+  <% if(currentPage > 1){%>
+  <button class="previous_page">previous page</button>
+  <% } %>
+</div>
