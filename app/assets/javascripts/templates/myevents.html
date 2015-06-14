@@ -5,12 +5,16 @@
   
       <ul>
         <li><h3><%= favourite.get("event").title %>  <%= favourite.get("event").city_name %> </h3></li> 
-        <li>At the <%= favourite.get("event").venue_name %> - <%= favourite.get("event").start_time %></li</li>
+        <li>At the <%= favourite.get("event").venue_name %> - <%= favourite.get("event").start_time %></li>
         <li class="truncate"><%= favourite.get("event").description%></li>
-        <li><button class="add btn">Buy Ticket</button></li>
-        <li><i class="fa fa-money fa-5x "></i></li>
-        <li><button class="add btn google_calender">Add To Google Calender</button></li>
-        <li><i class="fa fa-calendar fa-5x"></i></li>
+        <li><p>boom</p>
+          <div title="Add to Calendar" class="addthisevent">
+              <span class="start"><%= favourite.get("event").start_time %></span>
+              <span class="end"><%= favourite.get("event").end_time %></span>
+              <span class="title"><%= favourite.get("event").title %></span>
+              <span class="description"><%= favourite.get("event").description %></span>
+          </div>
+        </li>
       </ul>
   
 </br>
