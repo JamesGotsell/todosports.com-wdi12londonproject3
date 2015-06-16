@@ -1,3 +1,5 @@
+$mobile: new-breakpoint(max-width 500px 4);
+
 body{
   font-family: 'Fira Mono'; 
   margin: 0 auto;
@@ -72,8 +74,8 @@ a {
 div.edit h3 , p , a{
   padding: 10px; 
   text-align: center;
-
 }
+
 div.edit {
   padding: 20px;
 }
@@ -82,11 +84,10 @@ form {
   margin: 0 auto;
   width: 50%;
 }
+
 .buttons{
   padding-bottom: 50px;
 }
-
-
 
 .fa-5x {
   padding: 10px;
@@ -109,74 +110,59 @@ form {
 
 // events page
 #map-canvas {
-  position: fixed;
-  width: 400px; 
-  height: 400px;
+  position: relative;
+  width: 100%; 
+  min-height: 200px;
 }
+
 #map-canvas , .search-bar , #submit-search{
   float: left;
-  
 }
 
 .search-bar , #submit-search{
   display: inline-block;
-  float: left; 
   margin-top: 10px;
-  margin-right: 10px;
-  width: 390px
+  width: 100%
 }
-// .events ul {
-//   padding-top: 25px;
-//   display: inline;     
-// }
-
-
 
 .events ul {
   padding: 5px 0 5px 5px;
   background: lightgray;
-
-  
 }
-.events li{
-  
+
+.events li{  
   width: 100%;
 }
+
 .events ul li {
  display: inline-block;
  padding: 5px;
- float: left;
  text-align:left;
- // float: left;
- // clear: both;
 }
+
 .next_page, .previous_page{
   display: inline;
   float: left;
   clear: both;
   margin: 20px;
 }
+
 .navigation-tools{
   float: right;
-  width: 58%;
+  // width: 58%;
 }
 
 .navigation-tools , .events ul li{
   border: solid;
 }
-.navigation-tools ul li {
 
+.navigation-tools ul li {
   display: inline; 
   float: right;
   padding-top: 20px;
   padding-bottom:10px;
 }
 
-// myevents page 
-
-
-// responsive 
- 
 @media only screen and (max-width: 768px){
   #map-canvas, .search-bar , #submit-search {
     width: 100%;
@@ -186,24 +172,43 @@ form {
     padding: 10px;
   }
 }
-
-
+   
 @media only screen and (max-width: 640px){
-  #map-canvas, .search-bar , #submit-search {
-    width: 100%;
-  }
-  .navigation-tools {
-    width: 100%;
-    padding: 10px;
-  } 
+  // #map-canvas, .search-bar , #submit-search {
+  //   width: 100%;
+  // }
+  // .navigation-tools {
+  //   width: 100%;
+  //   padding: 10px;
+  // } 
 
 .truncate {
     width: 250px;
     white-space: nowrap;
     overflow: hidden;
-     text-overflow: ellipsis;
+    text-overflow: ellipsis;
+  }
+}
+
+.container {
+  @include outer-container;
+  .left-section {
+    @include span-columns(4);
+    @include omega();
+    padding: 0 20px;
+
+    @include media($mobile) {
+      @include span-columns(12);
+    }
   }
 
+  .right-section {
+    @include span-columns(8);
+    @include omega();
+    @include media($mobile) {
+      @include span-columns(12);
+    }
+  }
 }
 
  
