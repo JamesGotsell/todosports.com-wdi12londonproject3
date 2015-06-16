@@ -9,7 +9,8 @@ require.config({
     backbone: 'lib/backbone',
     text: 'lib/text',
     paginator: 'lib/paginator',
-    bourbon: 'lib/modules/bourbon-overrides'
+    bourbon: 'lib/modules/bourbon-overrides',
+    addthisevent: 'lib/addthisevent'
   }
 });
 

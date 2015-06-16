@@ -3,8 +3,9 @@ define([
   'underscore',
   'backbone',
   'collections/favourite',
-  'text!templates/myevents'
-], function($, _, Backbone, FavouriteCollection, myEventsTemplate){
+  'text!templates/myevents',
+  'addthisevent'
+], function($, _, Backbone, FavouriteCollection, myEventsTemplate, Addthisevent){
 
   var myEventsView = Backbone.View.extend({
     el: "main",
@@ -21,6 +22,7 @@ define([
     render: function(data) {
       var template = _.template(myEventsTemplate);
       this.$el.html(template({ favourites: data.models }));
+      addthisevent.refresh();
       return this.el;
     }
   });
