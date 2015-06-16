@@ -11,7 +11,7 @@
 .addthisevent-drop:hover        {border:1px solid #aab9d4;color:#000;font-size:15px;text-decoration:none;}
 .addthisevent-drop:active         {top:1px;}
 .addthisevent-selected          {background-color:#f9f9f9;}
-.addthisevent-drop .addthisevent_icon   {width:18px;height:18px;position:absolute;z-index:1;left:12px;top:10px;background:url(../gfx/icon-calendar-t1.svg) no-repeat;background-size:18px 18px;}
+.addthisevent-drop .addthisevent_icon   {width:18px;height:18px;position:absolute;z-index:1;left:12px;top:10px;background:url(../images/icon-calendar-t1.png) no-repeat;background-size:18px 18px;}
 
 /* The drop down */
 .addthisevent_dropdown          {width:200px;position:absolute;z-index:99999;padding:6px 0px 0px 0px;background:#fff;text-align:left;display:none;margin-top:-2px;margin-left:-1px;border-top:1px solid #c8c8c8;border-right:1px solid #bebebe;border-bottom:1px solid #a8a8a8;border-left:1px solid #bebebe;-moz-border-radius:2px;-webkit-border-radius:2px;-webkit-box-shadow:1px 3px 6px rgba(0,0,0,0.15);-moz-box-shadow:1px 3px 6px rgba(0,0,0,0.15);box-shadow:1px 3px 6px rgba(0,0,0,0.15);}
@@ -21,3 +21,83 @@
 .addthisevent_dropdown .brx       {height:1px;overflow:hidden;background:#e0e0e0;position:absolute;z-index:100;left:10px;right:10px;top:9px;}
 .addthisevent_dropdown .frs       {position:absolute;top:5px;cursor:pointer;right:10px;padding-left:10px;font-style:normal;font-weight:normal;text-align:right;z-index:101;line-height:110%;background:#fff;text-decoration:none;font-size:9px;color:#cacaca;}
 .addthisevent_dropdown .frs:hover     {color:#6d84b4;}
+// .addthisevent-drop {
+//   display: inline-block; 
+//   position: relative;
+//   margin-bottom: 5px;
+//   font-family: 'Abel', sans-serif !important;
+//   font-size: 1.2em;//14px
+//   background: blue;
+//   color: white;
+//   line-height: 1.5em;
+//   vertical-align: middle;
+//   cursor: pointer;
+//   padding-right: 10px;
+//   padding-left: 5px;
+//   text-align: left;
+//   transition: all 0.15s ease;
+//   text-transform: uppercase;
+//   text-decoration: none;
+//   &:hover {
+//     color: white;
+//     background: grey;
+//   }
+// }
+
+// .addthisevent-selected! {}
+
+// .addthisevent_dropdown {
+//   width: 200px;
+//   position: absolute;
+//   z-index: 99999;
+//   padding: 6px 0px 0px 0px;
+//   border: none ;
+//   background: #fff;
+//   text-align: left;
+//   display: none;
+//   margin-top: 10px;
+//   margin-left: -1px;
+//   span {
+//     width: 175px;
+//     display: block;
+//     line-height: 110%;
+//     background:white;
+//     text-decoration: none;
+//     font-size: 12px;
+//     color: grey ;
+//     padding: 8px 10px 9px 15px;
+//     &:hover {
+//       background: lightgrey;
+//       color: grey;
+//       text-decoration: none;
+//       font-size: 12px;
+//     }
+//   }
+// }
+
+// .addthisevent span {
+//   display: none !important;
+// }
+
+// .addthisevent-drop {
+// .start,.end,.title, .description{
+//     display: none !important;
+//   }
+// }
+
+// .addthisevent_dropdown {
+//   .copyx {
+//     display:none !important;
+//   }
+//   .brx {
+//    display:none !important;
+//   }
+//   .frs {
+//     display:none !important;
+//     }
+//   }
+
+
+// .addthisevent {
+//   // visibility: hidden;
+// }

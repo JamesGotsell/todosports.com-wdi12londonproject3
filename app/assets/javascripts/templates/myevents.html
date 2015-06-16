@@ -1,22 +1,21 @@
 
 <h1>My Favourited Events</h1>
-<div id="events-fade-in">
+<div id="myevents">
 <% _.each(favourites, function(favourite){ %>
   
       <ul>
         <li><h3><%= favourite.get("event").title %>  <%= favourite.get("event").city_name %> </h3></li> 
         <li>At the <%= favourite.get("event").venue_name %> - <%= favourite.get("event").start_time %></li>
         <li class="truncate"><%= favourite.get("event").description%></li>
-        <li><p>boom</p>
-          <div title="Add to Calendar" class="addthisevent">
+        <!-- <li><button>add to calender</button></li> -->
+      
+        <li title="Add to Calendar"class="addthisevent" >
               <span class="start"><%= favourite.get("event").start_time %></span>
               <span class="end"><%= favourite.get("event").end_time %></span>
               <span class="title"><%= favourite.get("event").title %></span>
               <span class="description"><%= favourite.get("event").description %></span>
-          </div>
-        </li>
-      </ul>
-  
+         </li>
+        </ul>  
 </br>
 <% }); %>
 

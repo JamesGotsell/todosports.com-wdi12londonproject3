@@ -22,21 +22,7 @@ define([
       var template = _.template(myEventsTemplate);
       this.$el.html(template({ favourites: data.models }));
       return this.el;
-    }, 
-    events: {
-      "click button.add.btn" : "buyTicket",
-      "click button.google_calender" : "googleCalender"
-    },
-
-    buyTicket: function(){
-      console.log("clicked");
-     
-    },
-
-    googleCalender: function(){
-      console.log('added to google calender');
-      
-    } 
+    }
   });
 
   return myEventsView;
