@@ -37,6 +37,7 @@ define([
       var template = _.template(EventsTemplate);
       this.$el.html(template({events: self.collection, currentPage: this.pageQuery}));
       self.mapInitialize();
+      addthisevent.refresh();
       return this.el;
     },
 

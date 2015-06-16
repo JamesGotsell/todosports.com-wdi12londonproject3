@@ -9,14 +9,18 @@
         <li class="truncate"><%= favourite.get("event").description%></li>
         <!-- <li><button>add to calender</button></li> -->
       
+        <% if (favourite.get("event").start_time) { %>    
         <li title="Add to Calendar"class="addthisevent" >
                 Add to Calendar
+              <span class="date_format">YYYY/MM/DD</span>
               <span class="start"><%= favourite.get("event").start_time %></span>
-              <span class="end"><%= favourite.get("event").end_time %></span>
+              <span class="end"><%= favourite.get("event").stop_time %></span>
               <span class="timezone">Europe/London</span>
               <span class="title"><%= favourite.get("event").title %></span>
               <span class="description"><%= favourite.get("event").description %></span>
+              <span class="all_day_event"><%= favourite.get("event").all_day %></span>
          </li>
+         <% } %>
         </ul>
 </br>
 <% }); %>
