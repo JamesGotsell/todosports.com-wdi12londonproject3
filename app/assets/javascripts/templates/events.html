@@ -29,18 +29,6 @@
         <li>At <%= event.get("venue_name") %> - <%= event.get("start_time") %></li>
         <li class="truncate"><%= event.get("description") %></li>
         <li><button class="add btn" data-id="<%= event.get("id") %>">Add</button></li>
-        <% if (event.get("start_time")) { %>    
-        <li title="Add to Calendar"class="addthisevent" >
-                Add to Calendar
-              <span class="date_format">YYYY/MM/DD</span>
-              <span class="start"><%=event.get("start_time") %></span>
-              <span class="end"><%=event.get("stop_time") %></span>
-              <span class="timezone">Europe/London</span>
-              <span class="title"><%=event.get("title") %></span>
-              <span class="description"><%=event.get("description") %></span>
-              <span class="all_day_event"><%=event.get("all_day")%></span>
-         </li>
-         <% } %>
       </ul>
     </li>
   <% }); %>
