@@ -1,16 +1,25 @@
-
-<h1 class="MyEvents">My Favourited Events</h1>
-<div id="">
+<h1>My Favourited Events</h1>
+<div id="myevents">
 <% _.each(favourites, function(favourite){ %>
   
       <ul>
         <li><h3><%= favourite.get("event").title %>  <%= favourite.get("event").city_name %> </h3></li> 
-        <li>At the <%= favourite.get("event").venue_name %> - <%= favourite.get("event").start_time %></li</li>
+        <li>At the <%= favourite.get("event").venue_name %> - <%= favourite.get("event").start_time %></li>
         <li class="truncate"><%= favourite.get("event").description%></li>
-        <li><button class="add btn google_calender">Add To Google Calender</button></li>
-        <li><i class="fa fa-calendar fa-5x"></i></li>
-      </ul>
-  
+        <% if (favourite.get("event").start_time) { %>    
+        <li title="Add to Calendar"class="addthisevent" >
+                Add to Calendar
+              <span class="date_format">YYYY/MM/DD</span>
+              <span class="start"><%= favourite.get("event").start_time %></span>
+              <span class="end"><%= favourite.get("event").stop_time %></span>
+              <span class="timezone">Europe/London</span>
+              <span class="title"><%= favourite.get("event").title %></span>
+              <span class="description"><%= favourite.get("event").description %></span>
+              <span class="all_day_event"><%= favourite.get("event").all_day %></span>
+         </li>
+         <% } %>
+        </ul>
+
 </br>
 <% }); %>
 
