@@ -1,4 +1,4 @@
-$mobile: new-breakpoint(max-width 500px 4);
+$mobile: new-breakpoint(max-width 800px 4);
 
 body{
   font-family: 'Fira Mono'; 
@@ -163,17 +163,17 @@ form {
   padding-bottom:10px;
 }
 
-// @media only screen and (max-width: 768px){
-//   #map-canvas, .search-bar , #submit-search {
-//     width: 100%;
-//   }
-//   .navigation-tools {
-//     width: 100%;
-//     padding: 10px;
-//   }
-// }
+@media only screen and (max-width: 768px){
+  #map-canvas, .search-bar , #submit-search {
+    width: 100%;
+  }
+  .navigation-tools {
+    width: 100%;
+    padding: 10px;
+  }
+}
    
-@media only screen and (max-width: 880px){
+@media only screen and (min-width: 880px){
     #map-canvas, .search-bar , #submit-search {
       width: 100%;
       padding: 10px;
@@ -217,7 +217,7 @@ form {
 
 
 
-@media only screen and (max-width: 850px){
+@media only screen and (max-width: 800px) and (min-width:500px){
 
   .container {
     @include outer-container;
@@ -225,6 +225,7 @@ form {
       @include span-columns(4);
       @include omega();
       padding: 0 20px;
+      background: blue;
 
 
       @include media($mobile) {
@@ -396,6 +397,6 @@ form {
  //       }
  //     }
  //   }
-   
+ // }  
   
 
