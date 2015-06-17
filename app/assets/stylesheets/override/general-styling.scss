@@ -1,3 +1,5 @@
+$mobile: new-breakpoint(max-width 800px 4);
+
 body{
   font-family: 'Fira Mono'; 
   margin: 0 auto;
@@ -10,14 +12,6 @@ body{
           }
       }
 
-}
-
-ul.events-fade-in {
-    display: inline;
-  li {
-    margin: 0 0 20px;
-
-  }
 }
 
 .outer-container {
@@ -44,11 +38,15 @@ h2.edit {
   text-align: center;
 }
 
-.add.btn , .tickets{ 
+.add.btn{ 
   margin-top: 15px;
   padding: 20px;
   font-size: 20px;
   background-color: black;
+  display:block;
+  float: right;
+  margin-right: 10px;
+  width: 95%;
 }
 
 .hero-copy h1{
@@ -76,8 +74,8 @@ a {
 div.edit h3 , p , a{
   padding: 10px; 
   text-align: center;
-
 }
+
 div.edit {
   padding: 20px;
 }
@@ -86,28 +84,331 @@ form {
   margin: 0 auto;
   width: 50%;
 }
+
 .buttons{
   padding-bottom: 50px;
-}
-
-.events ul {
-  padding-top: 25px;
-  display: inline;     
 }
 
 .fa-5x {
   padding: 10px;
 }
 
+
 // responsive 
 
-@media only screen and (max-width: 640px){
-  .truncate {
+.shared-links{
+  margin: 20px;
+    a {
+      margin: 10px;
+      padding: 10px;
+    }
+}
+.forgot-password{
+  height: 500px;
+  width: 200px;
+}
+.actions {
+  margin: 15px;
+}
+
+
+
+// events page
+#map-canvas {
+  position: relative;
+  width: 100%; 
+  min-height: 200px;
+}
+
+#map-canvas , .search-bar , #submit-search{
+  float: left;
+}
+
+.search-bar , #submit-search{
+  display: inline-block;
+  margin-top: 10px;
+  width: 100%
+}
+
+.events ul {
+  padding: 5px 0 5px 5px;
+  background: lightgray;
+}
+
+.events li{  
+  width: 100%;
+}
+
+.events ul li {
+ display: inline-block;
+ padding: 5px;
+ text-align:left;
+}
+
+.next_page, .previous_page{
+  display: inline;
+  float: left;
+  clear: both;
+  margin: 20px;
+}
+
+.navigation-tools{
+  float: right;
+  // width: 58%;
+}
+
+.navigation-tools , .events ul li{
+  border: solid;
+}
+
+.navigation-tools ul li {
+  display: inline; 
+  float: right;
+  padding-top: 20px;
+  padding-bottom:10px;
+}
+
+@media only screen and (max-width: 768px){
+  #map-canvas, .search-bar , #submit-search {
+    width: 100%;
+  }
+  .navigation-tools {
+    width: 100%;
+    padding: 10px;
+  }
+}
+   
+@media only screen and (min-width: 880px){
+    #map-canvas, .search-bar , #submit-search {
+      width: 100%;
+      padding: 10px;
+    }
+    .navigation-tools {
+      width: 100%;
+      padding: 10px;
+    }
+
+.truncate {
     width: 250px;
     white-space: nowrap;
     overflow: hidden;
-     text-overflow: ellipsis;
+    text-overflow: ellipsis;
+  }
+}
+
+.container {
+  @include outer-container;
+  .left-section {
+    @include span-columns(4);
+    @include omega();
+    padding: 0 20px;
+
+
+    @include media($mobile) {
+      @include span-columns(12);
+      width: 100%
+    }
   }
 
-  
+  .right-section {
+    @include span-columns(8);
+    @include omega();
+    @include media($mobile) {
+      @include span-columns(12);
+      width: 100%;
+    }
+  }
 }
+
+
+
+@media only screen and (max-width: 800px) and (min-width:500px){
+
+  #map-canvas, .search-bar , #submit-search {
+    padding-bottom: 10px;
+
+  }
+
+  .container {
+    @include outer-container;
+    .left-section {
+      @include span-columns(4);
+      @include omega();
+      padding: 0 20px;
+      
+      @include media($mobile) {
+        @include span-columns(12);
+        width: 100%
+      }
+    }
+
+    .right-section {
+      @include span-columns(8);
+      @include omega();
+      @include media($mobile) {
+        @include span-columns(12);
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 500px){
+
+  map-canvas, .search-bar , #submit-search {
+      padding-bottom: 10px;
+
+    }
+
+.truncate {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.container {
+  @include outer-container;
+  .left-section {
+    @include span-columns(4);
+    @include omega();
+    padding: 0 20px;
+
+    
+
+    @include media($mobile) {
+      @include span-columns(12);
+      width: 100%;
+    }
+  }
+
+  .right-section {
+    @include span-columns(8);
+    @include omega();
+    @include media($mobile) {
+      @include span-columns(12);
+      width: 100%;
+    }
+  }
+}
+ 
+ /////////////////////////////////////////////////////////
+ // stuff i've been working on 
+ //  to try and get the layout right 
+ // @media only screen and (max-width: 880px){
+ //   #map-canvas, .search-bar , #submit-search {
+ //     width: 100%;
+ //     padding: 10px;
+ //   }
+ //   .navigation-tools {
+ //     width: 100%;
+ //     padding: 10px;
+ //   }
+
+ //   .truncate {
+ //     width: 250px;
+ //     white-space: nowrap;
+ //     overflow: hidden;
+ //     text-overflow: ellipsis;
+ //   }
+
+
+ //   .container {
+ //     @include outer-container;
+ //     .left-section {
+ //       @include span-columns(4);
+ //       @include omega();
+ //       padding: 0 20px;
+
+
+ //       @include media($mobile) {
+ //         @include span-columns(12);
+ //         width: 100%
+ //       }
+ //     }
+
+ //     .right-section {
+ //       @include span-columns(8);
+ //       @include omega();
+ //       @include media($mobile) {
+ //         @include span-columns(12);
+ //         width: 100%;
+ //       }
+ //     }
+ //   }
+ // }
+
+ //             @media only screen and (max-width: 768px){
+ //               .truncate {
+ //                 width: 250px;
+ //                 white-space: nowrap;
+ //                 overflow: hidden;
+ //                 text-overflow: ellipsis;
+ //               }
+
+ //               .container {
+ //                 @include outer-container;
+ //                 .left-section {
+ //                   @include span-columns(6);
+ //                   @include omega();
+ //                   padding: 0 20px;
+
+
+
+ //                   @include media($mobile) {
+ //                     @include span-columns(12);
+ //                     width: 100%;
+ //                   }
+ //                 }
+
+ //                 .right-section {
+ //                   @include span-columns(6);
+ //                   @include omega();
+ //                   @include media($mobile) {
+ //                     @include span-columns(12);
+ //                     width: 100%;
+ //                   }
+ //                 }
+ //               }
+ //             }
+
+           
+
+ // @media only screen and (max-width: 500px){
+ //   .truncate {
+ //       width: 250px;
+ //       white-space: nowrap;
+ //       overflow: hidden;
+ //       text-overflow: ellipsis;
+ //     }
+
+
+ //   .container {
+ //     @include outer-container;
+ //     .left-section {
+ //       @include span-columns(6);
+ //       @include omega();
+ //       padding: 0 20px;
+
+       
+
+ //       @include media($mobile) {
+ //         @include span-columns(12);
+ //         width: 100%;
+ //       }
+ //     }
+
+ //     .right-section {
+ //       @include span-columns(6);
+ //       @include omega();
+ //       @include media($mobile) {
+ //         @include span-columns(12);
+ //         width: 100%;
+ //       }
+ //     }
+ //   }
+ // }  
+  
+
