@@ -40,7 +40,8 @@ define([
       addthisevent.refresh();
       return this.el;
     },
-
+   // within the addToFavourites method implement mandrill email reminder 
+   // 
     events: {
       'click .add'                  : 'addToFavourites',
       'click #submit-search'        : 'refreshData',
