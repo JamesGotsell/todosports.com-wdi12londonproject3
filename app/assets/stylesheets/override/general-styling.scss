@@ -219,15 +219,18 @@ form {
 
 @media only screen and (max-width: 800px) and (min-width:500px){
 
+  #map-canvas, .search-bar , #submit-search {
+    padding-bottom: 10px;
+
+  }
+
   .container {
     @include outer-container;
     .left-section {
       @include span-columns(4);
       @include omega();
       padding: 0 20px;
-      background: blue;
-
-
+      
       @include media($mobile) {
         @include span-columns(12);
         width: 100%
@@ -248,6 +251,10 @@ form {
 
 @media only screen and (max-width: 500px){
 
+  map-canvas, .search-bar , #submit-search {
+      padding-bottom: 10px;
+
+    }
 
 .truncate {
     width: 250px;
