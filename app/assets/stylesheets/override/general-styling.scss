@@ -163,24 +163,25 @@ form {
   padding-bottom:10px;
 }
 
-@media only screen and (max-width: 768px){
-  #map-canvas, .search-bar , #submit-search {
-    width: 100%;
-  }
-  .navigation-tools {
-    width: 100%;
-    padding: 10px;
-  }
-}
+// @media only screen and (max-width: 768px){
+//   #map-canvas, .search-bar , #submit-search {
+//     width: 100%;
+//   }
+//   .navigation-tools {
+//     width: 100%;
+//     padding: 10px;
+//   }
+// }
    
-@media only screen and (max-width: 640px){
-  // #map-canvas, .search-bar , #submit-search {
-  //   width: 100%;
-  // }
-  // .navigation-tools {
-  //   width: 100%;
-  //   padding: 10px;
-  // } 
+@media only screen and (max-width: 880px){
+    #map-canvas, .search-bar , #submit-search {
+      width: 100%;
+      padding: 10px;
+    }
+    .navigation-tools {
+      width: 100%;
+      padding: 10px;
+    }
 
 .truncate {
     width: 250px;
@@ -197,8 +198,10 @@ form {
     @include omega();
     padding: 0 20px;
 
+
     @include media($mobile) {
       @include span-columns(12);
+      width: 100%
     }
   }
 
@@ -207,10 +210,192 @@ form {
     @include omega();
     @include media($mobile) {
       @include span-columns(12);
+      width: 100%;
     }
   }
 }
 
+
+
+@media only screen and (max-width: 850px){
+
+  .container {
+    @include outer-container;
+    .left-section {
+      @include span-columns(4);
+      @include omega();
+      padding: 0 20px;
+
+
+      @include media($mobile) {
+        @include span-columns(12);
+        width: 100%
+      }
+    }
+
+    .right-section {
+      @include span-columns(8);
+      @include omega();
+      @include media($mobile) {
+        @include span-columns(12);
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 500px){
+
+
+.truncate {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.container {
+  @include outer-container;
+  .left-section {
+    @include span-columns(4);
+    @include omega();
+    padding: 0 20px;
+
+    
+
+    @include media($mobile) {
+      @include span-columns(12);
+      width: 100%;
+    }
+  }
+
+  .right-section {
+    @include span-columns(8);
+    @include omega();
+    @include media($mobile) {
+      @include span-columns(12);
+      width: 100%;
+    }
+  }
+}
  
+ /////////////////////////////////////////////////////////
+ // stuff i've been working on 
+ //  to try and get the layout right 
+ // @media only screen and (max-width: 880px){
+ //   #map-canvas, .search-bar , #submit-search {
+ //     width: 100%;
+ //     padding: 10px;
+ //   }
+ //   .navigation-tools {
+ //     width: 100%;
+ //     padding: 10px;
+ //   }
+
+ //   .truncate {
+ //     width: 250px;
+ //     white-space: nowrap;
+ //     overflow: hidden;
+ //     text-overflow: ellipsis;
+ //   }
+
+
+ //   .container {
+ //     @include outer-container;
+ //     .left-section {
+ //       @include span-columns(4);
+ //       @include omega();
+ //       padding: 0 20px;
+
+
+ //       @include media($mobile) {
+ //         @include span-columns(12);
+ //         width: 100%
+ //       }
+ //     }
+
+ //     .right-section {
+ //       @include span-columns(8);
+ //       @include omega();
+ //       @include media($mobile) {
+ //         @include span-columns(12);
+ //         width: 100%;
+ //       }
+ //     }
+ //   }
+ // }
+
+ //             @media only screen and (max-width: 768px){
+ //               .truncate {
+ //                 width: 250px;
+ //                 white-space: nowrap;
+ //                 overflow: hidden;
+ //                 text-overflow: ellipsis;
+ //               }
+
+ //               .container {
+ //                 @include outer-container;
+ //                 .left-section {
+ //                   @include span-columns(6);
+ //                   @include omega();
+ //                   padding: 0 20px;
+
+
+
+ //                   @include media($mobile) {
+ //                     @include span-columns(12);
+ //                     width: 100%;
+ //                   }
+ //                 }
+
+ //                 .right-section {
+ //                   @include span-columns(6);
+ //                   @include omega();
+ //                   @include media($mobile) {
+ //                     @include span-columns(12);
+ //                     width: 100%;
+ //                   }
+ //                 }
+ //               }
+ //             }
+
+           
+
+ // @media only screen and (max-width: 500px){
+ //   .truncate {
+ //       width: 250px;
+ //       white-space: nowrap;
+ //       overflow: hidden;
+ //       text-overflow: ellipsis;
+ //     }
+
+
+ //   .container {
+ //     @include outer-container;
+ //     .left-section {
+ //       @include span-columns(6);
+ //       @include omega();
+ //       padding: 0 20px;
+
+       
+
+ //       @include media($mobile) {
+ //         @include span-columns(12);
+ //         width: 100%;
+ //       }
+ //     }
+
+ //     .right-section {
+ //       @include span-columns(6);
+ //       @include omega();
+ //       @include media($mobile) {
+ //         @include span-columns(12);
+ //         width: 100%;
+ //       }
+ //     }
+ //   }
+   
   
 
