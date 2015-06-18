@@ -40,8 +40,6 @@ define([
       addthisevent.refresh();
       return this.el;
     },
-   // within the addToFavourites method implement mandrill email reminder 
-   // 
     events: {
       'click .add'                  : 'addToFavourites',
       'click #submit-search'        : 'refreshData',
@@ -58,6 +56,8 @@ define([
       }).done(function(data) {
         Backbone.history.navigate('/myevents', true);
       });
+      // i need this specific event to be emailed to the user via mandrill
+      // event_id: $(event.currentTarget).data("id")
     },
 
     refreshData: function(callback){
