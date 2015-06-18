@@ -4,9 +4,10 @@ class Favourite < ActiveRecord::Base
 
   default_scope { order(created_at: :desc) }
 
+  after_create :send_email
 
-  def after_create
-
-  end 
+  def send_email 
+      Mandrill.post_email(self.user).deliver
+  end
 
 end
